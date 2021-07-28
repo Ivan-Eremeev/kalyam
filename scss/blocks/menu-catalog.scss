@@ -1,0 +1,11 @@
+.menu-catalog {
+  position: relative;
+  &__nav {
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+  }
+  &__btn {
+    transition: 0.2s;
+  }
+}

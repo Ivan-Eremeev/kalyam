@@ -1,5 +1,6 @@
 .menu {
-	position: relative;
+	position: absolute;
+	opacity: 0;
 	&__nav {
 		transition: .5s;
 	}
@@ -37,7 +38,6 @@
 		}
 	}
 	&__btn {
-		display: none;
 	}
 	@media (max-width: $break_sm) {
 		&__nav {

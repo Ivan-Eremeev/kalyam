@@ -1,0 +1,31 @@
+.userblock {
+  display: flex;
+  margin-left: -32px;
+  &__item {
+    align-items: center;
+    font-size: 10px;
+    font-weight: 600;
+    color: #898989;
+    margin-left: 32px;
+    transition: $trans;
+    &:hover {
+      color: $green;
+      .userblock__icon {
+        svg {
+          fill: $green;
+        }
+      }
+    }
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    margin-bottom: 5px;
+    svg {
+      fill: #898989;
+      transition: $trans;
+    }
+  }
+}

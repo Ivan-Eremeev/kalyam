@@ -1,0 +1,27 @@
+.menu-info {
+  position: relative;
+  &__btn {
+    transition: $trans;
+    user-select: none;
+    cursor: pointer;
+    svg {
+      fill: $green;
+      transition: $trans;
+    }
+    &.is-active {
+      svg {
+        fill: #828282;
+      }
+    }
+  }
+  &__drop {
+    position: absolute;
+    visibility: hidden;
+  }
+  &__title {
+    
+  }
+  &__text {
+    
+  }
+}

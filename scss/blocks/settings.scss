@@ -3,7 +3,7 @@ html {
   height: 100%;
 }
 a {
-  transition: .1s;
+  transition: $trans;
   text-decoration: none;
 }
 button,
@@ -18,6 +18,7 @@ body {
   background-color: #fefefe;
   font-family: "Gilroy";
   font-size: 16px;
+  color: #515151;
   &.lock {
     position: fixed;
   }
@@ -74,5 +75,45 @@ body {
 }
 .content {
   flex-grow: 1;
+  padding-top: 75px;
+}
+.btn {
+  display: inline-block;
+  padding: 15px 40px 14px;
+  background-color: $green;
+  box-shadow: 0px 4px 13px rgba(6, 6, 6, 0.1);
+  border-radius: 5px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  transition: $trans;
+  &--mini {
+    padding: 7px 20px 8px;
+    box-shadow: none;
+    font-size: 16px;
+  }
+  &:hover {
+    background-color: $greenL;
+  }
+  @media (max-width: $break_sm) {
+    font-size: 22px;
+    &--mini {
+      font-size: 16px;
+    }
+  }
+}
+.hamburger {
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    transition: $trans !important;
+  }
+  &:hover, &.is-active {
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+      background-color: #BDBDBD !important;
+    }
+  }
 }
 /* /settings */
