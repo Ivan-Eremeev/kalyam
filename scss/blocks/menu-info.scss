@@ -1,27 +1,84 @@
 .menu-info {
+  display: flex;
+  align-items: center;
   position: relative;
   &__btn {
+    display: flex;
+    align-items: center;
+    height: 40px;
     transition: $trans;
     user-select: none;
     cursor: pointer;
+    position: relative;
+    z-index: 12;
     svg {
       fill: $green;
       transition: $trans;
     }
-    &.is-active {
+    &:hover, &.is-active {
       svg {
         fill: #828282;
       }
     }
   }
   &__drop {
+    width: 380px;
+    padding: 25px 40px 25px 100px;
+    background-color: #fff;
+    box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.05);
+    border-radius: 0px 0px 5px 5px;
     position: absolute;
+    top: 0;
+    left: -20px;
+    opacity: 0;
     visibility: hidden;
+    transform: translate(0,50px);
+    transition: 0.5s;
+    z-index: 11;
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0,0);
+    }
   }
   &__title {
-    
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 4px;
   }
   &__text {
-    
+    padding-left: 10px;
+    color: #828282;
+    position: relative;
+    margin-bottom: 15px;
+    &:after {
+      content: '';
+      display: block;
+      width: 3px;
+      height: 3px;
+      background-color: #828282;
+      border-radius: 100%;
+      position: absolute;
+      top: 8px;
+      left: 0;
+    }
+  }
+  @media (max-width: $break_md) {
+    &__btn {
+      margin-right: 20px;
+    }
+    &__drop {
+      padding: 95px 40px 25px;
+      left: -110px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__title {
+      font-size: 20px;
+    }
+    &__text {
+      font-size: 14px;
+    }
   }
 }

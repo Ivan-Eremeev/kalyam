@@ -14,9 +14,8 @@ $(document).ready(function () {
 	
 	// Подключение настроек плагинов. Использовать "//=" перед строкой пути
 	// libs-settings/fancybox_settings.js
-	// libs-settings/slick_settings.js
+	//= libs-settings/slick_settings.js
 	// libs-settings/fullpage_settings.js
-	// libs-settings/tinyscrollbar-settings.js
 	// libs-settings/tooltipster-settings.js
 	// libs-settings/yandex-map-settings.js
 	// libs-settings/google-map-settings.js
@@ -663,18 +662,26 @@ $(document).ready(function () {
 	// Задать блокам выпадайкам .js-drop и айдишник совпадающий с data-drop="" в кнопке для этого блока
 	// Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
 	function DropBlock(drop, button) {
-		button.on('click', function () { // клик по кнопке
+		var close = $('.js-drop-close');
+		button.on('click', function (e) { // клик по кнопке
+			e.preventDefault();
 			var $this = $(this),
-				data = $this.data('drop');
+					data = $this.data('drop'),
+					dropThis = $('#' + data);
+					console.log(dropThis);
 			if (!$this.hasClass('is-active')) { // если имеет класс .is-active скрываем все выпадайки и открываем только относящуюся к кнопке
 				drop.removeClass('open');
 				button.removeClass('is-active');
 				$this.addClass('is-active');
-				$('#' + data).addClass('open');
+				dropThis.addClass('open');
 			} else { // если не имеет класс .active скрываем все выпадайки
 				button.removeClass('is-active');
 				drop.removeClass('open');
 			}
+			close.on('click', function () {
+				console.log('dd');
+				dropThis.removeClass('open');
+			})
 		})
 		$(document).mouseup(function (e) { // клик по любому месту страницы вне блока (скрываем все выпадайки)
 			if (!drop.is(e.target)
@@ -687,6 +694,8 @@ $(document).ready(function () {
 		});
 	}
 	DropBlock($('.js-drop'), $('.js-drop-btn'));
+	DropBlock($('.js-drop-mob'), $('.js-drop-btn-mob'));
+	DropBlock($('.js-drop-catalog'), $('.js-drop-btn-catalog'));
 
 	// // JQuery Slider // Ползунок
 	// function JQuerySlider() {
@@ -719,4 +728,9 @@ $(document).ready(function () {
 	// }
 	// JQuerySlider();
 
+	// JQuery Scrollbar
+	// if ($('.scrollbar-inner').length) {
+	// 	$('.scrollbar-inner').scrollbar();
+	// }
+	
 });

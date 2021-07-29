@@ -1,5 +1,6 @@
 .userblock {
   display: flex;
+  align-items: center;
   margin-left: -32px;
   &__item {
     align-items: center;
@@ -8,6 +9,7 @@
     color: #898989;
     margin-left: 32px;
     transition: $trans;
+    user-select: none;
     &:hover {
       color: $green;
       .userblock__icon {

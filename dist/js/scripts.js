@@ -14,9 +14,83 @@ $(document).ready(function () {
 	
 	// Подключение настроек плагинов. Использовать "//=" перед строкой пути
 	// libs-settings/fancybox_settings.js
-	// libs-settings/slick_settings.js
+	// // Slick Slider
+	// function slider(slider,sliderFor) {
+	//   if (slider.length) {
+	//     slider.slick({
+	//       slidesToShow: 1, // Сколько слайдов показывать на экране
+	//       slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+	//       asNavFor: sliderFor, // Связь со слайдерами
+	//       dots: true, // Пагинация
+	//       arrows: true, // Стрелки
+	//       speed: 500, // Скорость перехода слайдов
+	//       autoplay: false, // Автопрокрутка
+	//       autoplaySpeed: 2000, // Скорость автопрокрутки
+	//       centerMode: false, // Задает класс .slick-center слайду в центре
+	//       focusOnSelect: true, // Выбрать слайд кликом
+	//       infinite: false, // Зацикленное пролистывание
+	//       vertical: false, // Вертикальный слайдер
+	//       rtl: false, // Слайды листаются справа налево
+	//       centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
+	//       adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
+	//       variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
+	//       swipe: true, // Перелистывание пальцем
+	//       draggable: true, // Перелистывание мышью
+	//       swipeToSlide: true, // Свободное перелистывание (на произвольное кол-во слайдов)
+	//       responsive: [ // Адаптация
+	//         {
+	//         breakpoint: 992,
+	//           settings: {
+	//             arrows: false,
+	//           }
+	//         },
+	//         {
+	//         breakpoint: 720,
+	//           settings: {
+	//             arrows: false,
+	//           }
+	//         }
+	//       ]
+	//       // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
+	//     });
+	    
+	//     sliderFor.slick({
+	//       slidesToShow: 1, // Сколько слайдов показывать на экране
+	//       slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+	//       dots: false, // Пагинация
+	//       arrows: false, // Стрелки
+	//       fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
+	//       asNavFor: slider // Связь со слайдерами
+	//     });
+	//   }
+	// }
+	// slider();
+	
+	// $('.your-slider').slick('unslick'); // Уничтожить слайдер
+	
+	// $('.your-slider').slick('setPosition') // Переотрисовка слайдера. Например для использования в табах
+	
+	// Slick Slider
+	function slider(slider) {
+	  if (slider.length) {
+	    slider.slick({
+	      slidesToShow: 1, // Сколько слайдов показывать на экране
+	      slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+	      fade: true, // Эффект исчезновения
+	      dots: true, // Пагинация
+	      arrows: false, // Стрелки
+	      autoplay: true, // Автопрокрутка
+	      autoplaySpeed: 2000, // Скорость автопрокрутки
+	      infinite: false, // Зацикленное пролистывание
+	      adaptiveHeight: false, // Подгоняет высоту слайдера под элемент слайда
+	      swipe: true, // Перелистывание пальцем
+	      draggable: true, // Перелистывание мышью
+	      // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
+	    });
+	  }
+	}
+	slider($('.js-welcome-slider '));
 	// libs-settings/fullpage_settings.js
-	// libs-settings/tinyscrollbar-settings.js
 	// libs-settings/tooltipster-settings.js
 	// libs-settings/yandex-map-settings.js
 	// libs-settings/google-map-settings.js
@@ -663,18 +737,26 @@ $(document).ready(function () {
 	// Задать блокам выпадайкам .js-drop и айдишник совпадающий с data-drop="" в кнопке для этого блока
 	// Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
 	function DropBlock(drop, button) {
-		button.on('click', function () { // клик по кнопке
+		var close = $('.js-drop-close');
+		button.on('click', function (e) { // клик по кнопке
+			e.preventDefault();
 			var $this = $(this),
-				data = $this.data('drop');
+					data = $this.data('drop'),
+					dropThis = $('#' + data);
+					console.log(dropThis);
 			if (!$this.hasClass('is-active')) { // если имеет класс .is-active скрываем все выпадайки и открываем только относящуюся к кнопке
 				drop.removeClass('open');
 				button.removeClass('is-active');
 				$this.addClass('is-active');
-				$('#' + data).addClass('open');
+				dropThis.addClass('open');
 			} else { // если не имеет класс .active скрываем все выпадайки
 				button.removeClass('is-active');
 				drop.removeClass('open');
 			}
+			close.on('click', function () {
+				console.log('dd');
+				dropThis.removeClass('open');
+			})
 		})
 		$(document).mouseup(function (e) { // клик по любому месту страницы вне блока (скрываем все выпадайки)
 			if (!drop.is(e.target)
@@ -687,6 +769,8 @@ $(document).ready(function () {
 		});
 	}
 	DropBlock($('.js-drop'), $('.js-drop-btn'));
+	DropBlock($('.js-drop-mob'), $('.js-drop-btn-mob'));
+	DropBlock($('.js-drop-catalog'), $('.js-drop-btn-catalog'));
 
 	// // JQuery Slider // Ползунок
 	// function JQuerySlider() {
@@ -719,4 +803,9 @@ $(document).ready(function () {
 	// }
 	// JQuerySlider();
 
+	// JQuery Scrollbar
+	// if ($('.scrollbar-inner').length) {
+	// 	$('.scrollbar-inner').scrollbar();
+	// }
+	
 });

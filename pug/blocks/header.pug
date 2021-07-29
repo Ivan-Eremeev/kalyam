@@ -3,30 +3,190 @@ header.header#header
 	.wrapper
 		.header__container
 
+			.js-drop-btn.header__hamb.hamburger.hamburger--squeeze(data-drop="mobile-menu").mobile-visible
+				.hamburger-box
+					.hamburger-inner
+
 			// menu-catalog
 			.menu-catalog
-				.js-drop-btn.menu-catalog__btn.hamburger.hamburger--squeeze(data-drop="menu-catalog")
+				.js-drop-btn.menu-catalog__btn.hamburger.hamburger--squeeze(data-drop="menu-catalog").mobile-hide
 					.hamburger-box
 						.hamburger-inner
 				nav.menu-catalog__nav.js-drop#menu-catalog
+					.menu-catalog__close.js-drop-close ←
 					ul.menu-catalog__list
+						li.menu-catalog__children
+							a(href="#") Все категории товаров
+							span.menu-catalog__next.js-drop-btn-catalog(data-drop="menu-catalog-inner_1")
+								<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L9 7.5L1 14"/>
+								</svg>
+							ul.menu-catalog__sublist.js-drop-catalog#menu-catalog-inner_1
+								li 
+									a(href="#") Название товара 1
+								li 
+									a(href="#") Название товара 1
+								li 
+									a(href="#") Название товара 1
+								li 
+									a(href="#") Название товара 1 
+								li 
+									a(href="#") Название товара 1
+								li 
+									a(href="#") Название товара 1
+								li 
+									a(href="#") Название товара 1
+								li 
+									a(href="#") Название товара 1
+						li.menu-catalog__children
+							a(href="#") Канцелярия
+							span.menu-catalog__next.js-drop-btn-catalog(data-drop="menu-catalog-inner_2")
+								<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L9 7.5L1 14"/>
+								</svg>
+							ul.menu-catalog__sublist.js-drop-catalog#menu-catalog-inner_2
+								li 
+									a(href="#") Название товара 2
+								li 
+									a(href="#") Название товара 2
+								li 
+									a(href="#") Название товара 2
+								li 
+									a(href="#") Название товара 2 
+								li 
+									a(href="#") Название товара 2
+								li 
+									a(href="#") Название товара 2
+								li 
+									a(href="#") Название товара 2
+								li 
+									a(href="#") Название товара 2
+								li 
+									a(href="#") Название товара 2
+								li 
+									a(href="#") Название товара 2
+								li 
+									a(href="#") Название товара 2
+						li.menu-catalog__children
+							a(href="#") Хозтовары
+							span.menu-catalog__next.js-drop-btn-catalog(data-drop="menu-catalog-inner_3")
+								<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L9 7.5L1 14"/>
+								</svg>
+							ul.menu-catalog__sublist.js-drop-catalog#menu-catalog-inner_3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3 
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+								li 
+									a(href="#") Название товара 3
+						li.menu-catalog__children
+							a(href="#") Развивающая литература
+							span.menu-catalog__next.js-drop-btn-catalog(data-drop="menu-catalog-inner_4")
+								<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L9 7.5L1 14"/>
+								</svg>
+							ul.menu-catalog__sublist.js-drop-catalog#menu-catalog-inner_4
+								li 
+									a(href="#") Название товара 4
+								li 
+									a(href="#") Название товара 4
+								li 
+									a(href="#") Название товара 4
+								li 
+									a(href="#") Название товара 4 
 						li
-							a(href="#") Меню 1
+							a(href="#") Татарская литература
+							span.menu-catalog__next
+								<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L9 7.5L1 14"/>
+								</svg>
 						li
-							a(href="#") Меню 2
+							a(href="#") Игры и игрушки
+							span.menu-catalog__next
+								<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L9 7.5L1 14"/>
+								</svg>
 						li
-							a(href="#") Меню 3
+							a(href="#") Всё для праздника
+							span.menu-catalog__next
+								<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L9 7.5L1 14"/>
+								</svg>
 						li
-							a(href="#") Меню 4
+							a(href="#") Книги
+							span.menu-catalog__next
+								<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L9 7.5L1 14"/>
+								</svg>
 						li
-							a(href="#") Меню 5
+							a(href="#") Всё для творчества
+							span.menu-catalog__next
+								<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L9 7.5L1 14"/>
+								</svg>
 						li
-							a(href="#") Меню 6
+							a(href="#") Сувениры
+							span.menu-catalog__next
+								<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L9 7.5L1 14"/>
+								</svg>
 						li
-							a(href="#") Меню 7
+							a(href="#") Фоторамки и фотоальбомы
+							span.menu-catalog__next
+								<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L9 7.5L1 14"/>
+								</svg>
 						li
-							a(href="#") Меню 8
-					.menu-catalog__close
+							a(href="#") Электроника
+							span.menu-catalog__next
+								<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L9 7.5L1 14"/>
+								</svg>
+						li
+							a(href="#") Пряжа и рукоделие
+							span.menu-catalog__next
+								<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L9 7.5L1 14"/>
+								</svg>
 			// /menu-catalog
 
 			// logo
@@ -36,13 +196,13 @@ header.header#header
 
 			// search
 			form(action="#").search
-				input#search.search(type="text" placeholder="Я ищу...")
+				input#search(type="text" placeholder="Я ищу...")
 				button(type="submit")
 					img(src="img/zoom.svg", alt="")
 			//	/search
 
 			// menu-info
-			.menu-info
+			.menu-info.mobile-hide
 				.menu-info__btn.js-drop-btn(data-drop="menu-info")
 					<svg width="35" height="8" viewBox="0 0 35 8" xmlns="http://www.w3.org/2000/svg">
 						<circle cx="3.36133" cy="3.99609" r="3.5"/>
@@ -59,10 +219,10 @@ header.header#header
 					.menu-info__text +7 917 935-96-35
 			//	/menu-info
 
-			.btn.btn--mini Регистрация
+			.btn.btn--mini.tablet-hide Регистрация
 
 			// userblock
-			.userblock
+			.userblock.mobile-hide
 				a(href="#").userblock__item
 					.userblock__icon 
 						<svg width="36" height="32" viewBox="0 0 36 32" xmlns="http://www.w3.org/2000/svg">
@@ -83,5 +243,36 @@ header.header#header
 						</svg>
 					span Войти
 			//	/userblock
+
+			// mobile-menu
+			.mobile-menu.js-drop#mobile-menu
+				.mobile-menu__row 
+					.mobile-menu__col
+						.mobile-menu__user 
+							a(href="#").mobile-menu__item
+								.mobile-menu__icon
+									img(src="img/cart.svg", alt="")
+								span.mobile-menu__text Корзина
+							a(href="#").mobile-menu__item
+								.mobile-menu__icon
+									img(src="img/heart.svg", alt="")
+								span.mobile-menu__text Избранное
+							a(href="#").mobile-menu__item
+								.mobile-menu__icon
+									img(src="img/user.svg", alt="")
+								span.mobile-menu__text Войти
+							a(href="#").mobile-menu__item.js-drop-btn-mob(data-drop="menu-catalog")
+								.mobile-menu__icon
+									img(src="img/search-list.svg", alt="")
+								span.mobile-menu__text Каталог товаров
+						.btn.btn--mini Регистрация
+					.mobile-menu__col
+						.menu-info__title Адреса магазинов
+						.menu-info__text РТ, г. Казань, Метро Проспект Победы, торговая галерея
+						.menu-info__title Режим работы
+						.menu-info__text 8.00-20.00 в будние дни
+						.menu-info__title Телефон магазина
+						.menu-info__text +7 917 935-96-35
+			//	/mobile-menu
 
 // /header

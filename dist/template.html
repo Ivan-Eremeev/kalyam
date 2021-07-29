@@ -14,25 +14,118 @@
 			<header class="header" id="header">
 				<div class="wrapper">
 					<div class="header__container">
+						<div class="js-drop-btn header__hamb hamburger hamburger--squeeze mobile-visible" data-drop="mobile-menu">
+							<div class="hamburger-box">
+								<div class="hamburger-inner"></div>
+							</div>
+						</div>
 						<!-- menu-catalog-->
 						<div class="menu-catalog">
-							<div class="js-drop-btn menu-catalog__btn hamburger hamburger--squeeze" data-drop="menu-catalog">
+							<div class="js-drop-btn menu-catalog__btn hamburger hamburger--squeeze mobile-hide" data-drop="menu-catalog">
 								<div class="hamburger-box">
 									<div class="hamburger-inner"></div>
 								</div>
 							</div>
 							<nav class="menu-catalog__nav js-drop" id="menu-catalog">
+								<div class="menu-catalog__close js-drop-close">←</div>
 								<ul class="menu-catalog__list">
-									<li><a href="#">Меню 1</a></li>
-									<li><a href="#">Меню 2</a></li>
-									<li><a href="#">Меню 3</a></li>
-									<li><a href="#">Меню 4</a></li>
-									<li><a href="#">Меню 5</a></li>
-									<li><a href="#">Меню 6</a></li>
-									<li><a href="#">Меню 7</a></li>
-									<li><a href="#">Меню 8</a></li>
+									<li class="menu-catalog__children"><a href="#">Все категории товаров</a><span class="menu-catalog__next js-drop-btn-catalog" data-drop="menu-catalog-inner_1"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L9 7.5L1 14"/>
+</svg></span>
+										<ul class="menu-catalog__sublist js-drop-catalog" id="menu-catalog-inner_1">
+											<li> <a href="#">Название товара 1</a></li>
+											<li> <a href="#">Название товара 1</a></li>
+											<li> <a href="#">Название товара 1</a></li>
+											<li> <a href="#">Название товара 1 </a></li>
+											<li> <a href="#">Название товара 1</a></li>
+											<li> <a href="#">Название товара 1</a></li>
+											<li> <a href="#">Название товара 1</a></li>
+											<li> <a href="#">Название товара 1</a></li>
+										</ul>
+									</li>
+									<li class="menu-catalog__children"><a href="#">Канцелярия</a><span class="menu-catalog__next js-drop-btn-catalog" data-drop="menu-catalog-inner_2"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L9 7.5L1 14"/>
+</svg></span>
+										<ul class="menu-catalog__sublist js-drop-catalog" id="menu-catalog-inner_2">
+											<li> <a href="#">Название товара 2</a></li>
+											<li> <a href="#">Название товара 2</a></li>
+											<li> <a href="#">Название товара 2</a></li>
+											<li> <a href="#">Название товара 2 </a></li>
+											<li> <a href="#">Название товара 2</a></li>
+											<li> <a href="#">Название товара 2</a></li>
+											<li> <a href="#">Название товара 2</a></li>
+											<li> <a href="#">Название товара 2</a></li>
+											<li> <a href="#">Название товара 2</a></li>
+											<li> <a href="#">Название товара 2</a></li>
+											<li> <a href="#">Название товара 2</a></li>
+										</ul>
+									</li>
+									<li class="menu-catalog__children"><a href="#">Хозтовары</a><span class="menu-catalog__next js-drop-btn-catalog" data-drop="menu-catalog-inner_3"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L9 7.5L1 14"/>
+</svg></span>
+										<ul class="menu-catalog__sublist js-drop-catalog" id="menu-catalog-inner_3">
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3 </a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+											<li> <a href="#">Название товара 3</a></li>
+										</ul>
+									</li>
+									<li class="menu-catalog__children"><a href="#">Развивающая литература</a><span class="menu-catalog__next js-drop-btn-catalog" data-drop="menu-catalog-inner_4"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L9 7.5L1 14"/>
+</svg></span>
+										<ul class="menu-catalog__sublist js-drop-catalog" id="menu-catalog-inner_4">
+											<li> <a href="#">Название товара 4</a></li>
+											<li> <a href="#">Название товара 4</a></li>
+											<li> <a href="#">Название товара 4</a></li>
+											<li> <a href="#">Название товара 4 </a></li>
+										</ul>
+									</li>
+									<li><a href="#">Татарская литература</a><span class="menu-catalog__next"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L9 7.5L1 14"/>
+</svg></span></li>
+									<li><a href="#">Игры и игрушки</a><span class="menu-catalog__next"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L9 7.5L1 14"/>
+</svg></span></li>
+									<li><a href="#">Всё для праздника</a><span class="menu-catalog__next"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L9 7.5L1 14"/>
+</svg></span></li>
+									<li><a href="#">Книги</a><span class="menu-catalog__next"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L9 7.5L1 14"/>
+</svg></span></li>
+									<li><a href="#">Всё для творчества</a><span class="menu-catalog__next"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L9 7.5L1 14"/>
+</svg></span></li>
+									<li><a href="#">Сувениры</a><span class="menu-catalog__next"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L9 7.5L1 14"/>
+</svg></span></li>
+									<li><a href="#">Фоторамки и фотоальбомы</a><span class="menu-catalog__next"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L9 7.5L1 14"/>
+</svg></span></li>
+									<li><a href="#">Электроника</a><span class="menu-catalog__next"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L9 7.5L1 14"/>
+</svg></span></li>
+									<li><a href="#">Пряжа и рукоделие</a><span class="menu-catalog__next"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L9 7.5L1 14"/>
+</svg></span></li>
 								</ul>
-								<div class="menu-catalog__close"></div>
 							</nav>
 						</div>
 						<!-- /menu-catalog-->
@@ -40,12 +133,12 @@
 						<!-- /logo-->
 						<!-- search-->
 						<form class="search" action="#">
-							<input class="search" id="search" type="text" placeholder="Я ищу...">
+							<input id="search" type="text" placeholder="Я ищу...">
 							<button type="submit"><img src="img/zoom.svg" alt=""></button>
 						</form>
 						<!--	/search-->
 						<!-- menu-info-->
-						<div class="menu-info">
+						<div class="menu-info mobile-hide">
 							<div class="menu-info__btn js-drop-btn" data-drop="menu-info"><svg width="35" height="8" viewBox="0 0 35 8" xmlns="http://www.w3.org/2000/svg">
 <circle cx="3.36133" cy="3.99609" r="3.5"/>
 <circle cx="17.3613" cy="3.99609" r="3.5"/>
@@ -62,9 +155,9 @@
 							</div>
 						</div>
 						<!--	/menu-info-->
-						<div class="btn btn--mini">Регистрация</div>
+						<div class="btn btn--mini tablet-hide">Регистрация</div>
 						<!-- userblock-->
-						<div class="userblock"><a class="userblock__item" href="#">
+						<div class="userblock mobile-hide"><a class="userblock__item" href="#">
 								<div class="userblock__icon">
 									 <svg width="36" height="32" viewBox="0 0 36 32" xmlns="http://www.w3.org/2000/svg">
 <path d="M34.5209 5.82623H6.37328L5.95487 1.30569C5.88644 0.566441 5.24761 0 4.48233 0H1.47846C0.661927 0 0 0.641957 0 1.43385C0 2.22575 0.661927 2.86771 1.47846 2.86771H3.13067C4.03358 12.6235 1.70002 -12.5916 4.83111 21.2408C4.95178 22.565 5.68953 24.0019 6.96044 24.9783C4.66904 27.8162 6.76268 32 10.49 32C13.5836 32 15.7656 29.0076 14.7047 26.1735H22.7965C21.737 29.004 23.9143 32 27.0113 32C29.4828 32 31.4936 30.0499 31.4936 27.6529C31.4936 25.2559 29.4828 23.3058 27.0113 23.3058H10.5C9.37694 23.3058 8.39827 22.6487 7.97586 21.6913L31.6036 20.3445C32.2486 20.3078 32.7944 19.8689 32.9512 19.261L35.9552 7.60782C36.1881 6.70422 35.4828 5.82623 34.5209 5.82623ZM10.49 29.1323C9.64898 29.1323 8.96466 28.4686 8.96466 27.6529C8.96466 26.8372 9.64898 26.1735 10.49 26.1735C11.3311 26.1735 12.0154 26.8372 12.0154 27.6529C12.0154 28.4686 11.3311 29.1323 10.49 29.1323ZM27.0112 29.1323C26.1701 29.1323 25.4858 28.4686 25.4858 27.6529C25.4858 26.8372 26.1701 26.1735 27.0112 26.1735C27.8523 26.1735 28.5366 26.8372 28.5366 27.6529C28.5366 28.4686 27.8523 29.1323 27.0112 29.1323ZM30.3459 17.5436L7.57787 18.8412L6.6387 8.69387H32.6273L30.3459 17.5436Z"/>
@@ -82,6 +175,28 @@
 </svg>
 								</div><span>Войти</span></a></div>
 						<!--	/userblock-->
+						<!-- mobile-menu-->
+						<div class="mobile-menu js-drop" id="mobile-menu">
+							<div class="mobile-menu__row"> 
+								<div class="mobile-menu__col">
+									<div class="mobile-menu__user"> <a class="mobile-menu__item" href="#">
+											<div class="mobile-menu__icon"><img src="img/cart.svg" alt=""></div><span class="mobile-menu__text">Корзина</span></a><a class="mobile-menu__item" href="#">
+											<div class="mobile-menu__icon"><img src="img/heart.svg" alt=""></div><span class="mobile-menu__text">Избранное</span></a><a class="mobile-menu__item" href="#">
+											<div class="mobile-menu__icon"><img src="img/user.svg" alt=""></div><span class="mobile-menu__text">Войти</span></a><a class="mobile-menu__item js-drop-btn-mob" href="#" data-drop="menu-catalog">
+											<div class="mobile-menu__icon"><img src="img/search-list.svg" alt=""></div><span class="mobile-menu__text">Каталог товаров</span></a></div>
+									<div class="btn btn--mini">Регистрация</div>
+								</div>
+								<div class="mobile-menu__col">
+									<div class="menu-info__title">Адреса магазинов</div>
+									<div class="menu-info__text">РТ, г. Казань, Метро Проспект Победы, торговая галерея</div>
+									<div class="menu-info__title">Режим работы</div>
+									<div class="menu-info__text">8.00-20.00 в будние дни</div>
+									<div class="menu-info__title">Телефон магазина</div>
+									<div class="menu-info__text">+7 917 935-96-35</div>
+								</div>
+							</div>
+						</div>
+						<!--	/mobile-menu-->
 					</div>
 				</div>
 			</header>
@@ -248,9 +363,7 @@
 			</div>
 			<!-- footer-->
 			<footer class="footer"> 
-				<div class="wrapper"> 
-					<div class="licence">Футер</div>
-				</div>
+				<div class="wrapper"> </div>
 			</footer>
 			<!-- /footer-->
 		</div>
