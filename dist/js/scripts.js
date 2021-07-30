@@ -97,9 +97,9 @@ $(document).ready(function () {
 	// mailto-ajax.js
 
 	// Запрет перехода по ссылкам с хэшем
-	$('a[href="#"]').click(function(e) {
-		e.preventDefault();
-	});
+	// $('a[href="#"]').click(function(e) {
+	// 	e.preventDefault();
+	// });
 
 	// Мобильное меню
 	// function myMenu(menu) {

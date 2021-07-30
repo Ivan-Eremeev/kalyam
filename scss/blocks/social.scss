@@ -13,7 +13,8 @@
     height: 40px;
     margin-left: 10px;
     margin-bottom: 10px;
-    background-color: $green;
+    background: $greenG;
+    transition: 0s;
     &:hover {
       background: #BDBDBD;
     }
