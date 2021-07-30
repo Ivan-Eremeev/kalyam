@@ -1,0 +1,50 @@
+.catalog {
+  padding-top: 55px;
+  padding-bottom: 11px;
+  font-size: 22px;
+  font-weight: 600;
+  &__col {
+    @include col(2);
+    @include col-md(3);
+    @include col-sm(4);
+    @include col-xs(6);
+    margin-bottom: 44px;
+  }
+  &__item {
+    color: #000;
+    text-align: center;
+    &:hover {
+      color: $green;
+    }
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    margin-bottom: 5px;
+    img {
+      max-height: 100%;
+    }
+  }
+  &__text {
+
+  }
+  @media (max-width: $break_sm) {
+    padding-bottom: 22px;
+    &__col {
+      margin-bottom: 34px;
+    }
+  }
+  @media (max-width: $break_xs) {
+    padding-top: 34px;
+    padding-bottom: 2px;
+    font-size: 18px;
+    &__col {
+      margin-bottom: 29px;
+    }
+    &__icon {
+      height: 55px;
+    }
+  }
+}

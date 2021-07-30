@@ -1,0 +1,22 @@
+mixin card-recom(count)
+  // card-recom
+  a(href="#").card-recom
+    .card-recom__img 
+      img(src="img/product-thumb_1.jpg", alt="")
+      .card-recom__stickers 
+        .card-recom__sticker.card-recom__sticker--red -20%
+    .card-recom__content 
+      .card-recom__price 
+        .card-recom__price-new 120р
+        .card-recom__price-old 170р
+      .card-recom__text Поп ит, Pop it, Игрушка Антистресс
+      form(action="#").card-recom__bottom
+        button(type="submit").btn В корзину
+        .card-recom__like 
+          input(id= count type="checkbox", name="card-recom-like")
+          label(for= count)
+            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.24597 15.6837C8.66377 16.1055 9.3408 16.1054 9.75838 15.6837L16.4932 8.88281C18.5023 6.85396 18.5023 3.55287 16.4932 1.52401C15.5198 0.541195 14.2257 -7.1989e-05 12.8492 7.18145e-09C11.4727 7.20033e-05 10.1787 0.541483 9.20547 1.52445L9.00207 1.72992L8.79788 1.52373C6.78889 -0.505053 3.51982 -0.505125 1.51041 1.52394C-0.503351 3.55747 -0.503636 6.84914 1.51055 8.88288L8.24597 15.6837Z"/>
+            </svg>
+
+  //	/card-recom

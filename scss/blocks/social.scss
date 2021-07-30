@@ -1,0 +1,40 @@
+.social {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: $green;
+    &:hover {
+      background: #BDBDBD;
+    }
+    &--tg {
+      img {
+        margin-right: 2px;
+      }
+    }
+    &--vk {
+
+    }
+    &--wap {
+      img {
+        margin-bottom: 2px;
+      }
+    }
+    &--insta {
+      img {
+        margin-left: 1px;
+        margin-bottom: 1px;
+      }
+    }
+  }
+}

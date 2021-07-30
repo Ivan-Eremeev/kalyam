@@ -662,26 +662,27 @@ $(document).ready(function () {
 	// Задать блокам выпадайкам .js-drop и айдишник совпадающий с data-drop="" в кнопке для этого блока
 	// Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
 	function DropBlock(drop, button) {
-		var close = $('.js-drop-close');
+		var close = $('.js-drop-close'),
+				dropThis = undefined;
 		button.on('click', function (e) { // клик по кнопке
 			e.preventDefault();
 			var $this = $(this),
-					data = $this.data('drop'),
-					dropThis = $('#' + data);
-					console.log(dropThis);
+					data = $this.data('drop');
+			dropThis = $('#' + data);
+			console.log(dropThis);
 			if (!$this.hasClass('is-active')) { // если имеет класс .is-active скрываем все выпадайки и открываем только относящуюся к кнопке
 				drop.removeClass('open');
 				button.removeClass('is-active');
 				$this.addClass('is-active');
 				dropThis.addClass('open');
 			} else { // если не имеет класс .active скрываем все выпадайки
-				button.removeClass('is-active');
-				drop.removeClass('open');
-			}
-			close.on('click', function () {
-				console.log('dd');
+				$this.removeClass('is-active');
 				dropThis.removeClass('open');
-			})
+			}
+		})
+		close.on('click', function () {
+			console.log('dd');
+			dropThis.removeClass('open');
 		})
 		$(document).mouseup(function (e) { // клик по любому месту страницы вне блока (скрываем все выпадайки)
 			if (!drop.is(e.target)
@@ -732,5 +733,41 @@ $(document).ready(function () {
 	// if ($('.scrollbar-inner').length) {
 	// 	$('.scrollbar-inner').scrollbar();
 	// }
+
+	// Раскрывание поиска в мобилке
+	function searchSlide() {
+		var search = $('.js-search-slide'),
+				button = search.find('button');
+		button.on('click', function (e) {
+			if ($(window).width() <= breakXs) {
+				e.preventDefault();
+				if (!button.hasClass('active')) {
+					button.addClass ('active');
+					search.addClass('open');
+				}else {
+					button.removeClass('active');
+					search.removeClass('open');
+				}
+			}else {
+				return false;
+			}
+		})
+		$(window).resize(function () {
+			if ($(window).width() > breakXs) {
+				button.removeClass('active');
+				search.removeClass('open');
+			}else {
+				return false;
+			}
+		})
+		$(document).mouseup(function (e) { // клик по любому месту страницы вне блока (скрываем все выпадайки)
+			if (!search.is(e.target)
+				&& search.has(e.target).length === 0) {
+				button.removeClass('active');
+				search.removeClass('open');
+			}
+		});
+	}
+	searchSlide();
 	
 });

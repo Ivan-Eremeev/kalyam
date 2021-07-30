@@ -15,6 +15,7 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/aos.css")
 
 block content
+	include blocks/card-recom.pug
 
 	.page
 
@@ -43,6 +44,97 @@ block content
 							.img-responsive
 								img(src="img/", alt="")
 				//	/welcome
+
+				// catalog
+				.catalog
+					.row 
+						.catalog__col
+							a(href="#").catalog__item 
+								.catalog__icon 
+									img(src="img/office.jpg", alt="")
+								.catalog__text Канцелярия
+						.catalog__col
+							a(href="#").catalog__item 
+								.catalog__icon 
+									img(src="img/book.jpg", alt="")
+								.catalog__text Книги
+						.catalog__col
+							a(href="#").catalog__item 
+								.catalog__icon 
+									img(src="img/toys.jpg", alt="")
+								.catalog__text Игрушки и игры
+						.catalog__col
+							a(href="#").catalog__item 
+								.catalog__icon 
+									img(src="img/household.jpg", alt="")
+								.catalog__text Хозтовары
+						.catalog__col
+							a(href="#").catalog__item 
+								.catalog__icon 
+									img(src="img/souvenirs.jpg", alt="")
+								.catalog__text Сувениры
+						.catalog__col
+							a(href="#").catalog__item 
+								.catalog__icon 
+									img(src="img/electronics.jpg", alt="")
+								.catalog__text Электроника
+						.catalog__col
+							a(href="#").catalog__item 
+								.catalog__icon 
+									img(src="img/literature.jpg", alt="")
+								.catalog__text Татарская литература
+						.catalog__col
+							a(href="#").catalog__item 
+								.catalog__icon 
+									img(src="img/developing.jpg", alt="")
+								.catalog__text Развивающая литература
+						.catalog__col
+							a(href="#").catalog__item 
+								.catalog__icon 
+									img(src="img/holiday.jpg", alt="")
+								.catalog__text Всё для праздника
+						.catalog__col
+							a(href="#").catalog__item 
+								.catalog__icon 
+									img(src="img/creativity.jpg", alt="")
+								.catalog__text Всё для творчества
+						.catalog__col
+							a(href="#").catalog__item 
+								.catalog__icon 
+									img(src="img/photography.jpg", alt="")
+								.catalog__text Фоторамки и фотоальбомы
+						.catalog__col
+							a(href="#").catalog__item 
+								.catalog__icon 
+									img(src="img/needlework.jpg", alt="")
+								.catalog__text Пряжа и рукоделие
+				//	/catalog
+
+				// banners
+				.banners
+					.row 
+						.banners__half 
+							a(href="#").banners__banner.img-responsive
+								img(src="img/banner_1.jpg", alt="")
+							a(href="#").banners__banner.img-responsive
+								img(src="img/banner_2.jpg", alt="")
+							a(href="#").banners__banner.img-responsive
+								img(src="img/banner_3.jpg", alt="")
+						.banners__half 
+							.banners__row
+								.banners__col 
+									+card-recom('card-recom-like_1')
+								.banners__col 
+									+card-recom('card-recom-like_2')
+								.banners__col 
+									+card-recom('card-recom-like_3')
+								.banners__col 
+									+card-recom('card-recom-like_4')
+								.banners__col 
+									+card-recom('card-recom-like_5')
+								.banners__col 
+									+card-recom('card-recom-like_6')
+				//	/banners
 			
 		include blocks/footer.pug
 

@@ -1,0 +1,65 @@
+.banners {
+  padding-top: 55px;
+  padding-bottom: 30px;
+  &__half {
+    @include col(6);
+    @include col-lg(12);
+  }
+  &__banner {
+    display: block;
+    margin-bottom: 20px;
+    &:after {
+      padding-top: 27.4%;
+    }
+    img {
+      display: block;
+    }
+  }
+  &__row {
+    @include row-flex();
+  }
+  &__col {
+    @include col(4);
+    @include col-lg(3);
+    @include col-sm(4);
+    @include col-xs(6);
+    margin-bottom: 27px;
+  }
+  @media (max-width: $break_lg) {
+    &__half {
+      margin-bottom: 35px;
+    }
+    &__row {
+      margin-left: -20px;
+    }
+    &__col {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    padding-bottom: 10px;
+    &__banner {
+      margin-bottom: 18px;
+      &:after {
+        padding-top: 29.3%;
+      }
+    }
+  }
+  @media (max-width: $break_xs) {
+    padding-top: 42px;
+    &__banner {
+      margin-bottom: 12px;
+    }
+    &__half {
+      margin-bottom: 28px;
+    }
+    &__row {
+      margin-left: -15px;
+    }
+    &__col {
+      padding-left: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}

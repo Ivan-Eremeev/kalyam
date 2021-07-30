@@ -80,14 +80,20 @@
     height: 38px;
     margin-left: 50px;
     input {
+      padding: 0 10px;
       position: absolute;
       top: 0;
       right: 0;
-      padding: 0 10px;
+      transition: 0.5s;
     }
     button {
       width: 38px;
       background-color: #F0F0F0;
+    }
+    &.open {
+      input {
+        width: 240px;
+      }
     }
   }
 }

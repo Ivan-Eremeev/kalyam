@@ -1,0 +1,131 @@
+.card-recom {
+  display: block;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 31px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 147px;
+    border-bottom: 1px solid #DDDDDD;
+    position: relative;
+    img {
+      max-height: 100%;
+      transition: 0.2s;
+    }
+  } 
+  &__stickers {
+    display: flex;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  &__sticker {
+    padding: 1px 6px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    font-size: 12px;
+    color: #fff;
+    &--red {
+      background-color: $red;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 11px 9px 16px;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+  &__price-new {
+    font-size: 21px;
+    font-weight: bold;
+    color: $red;
+  }
+  &__price-old {
+    margin-left: 11px;
+    font-size: 15px;
+    color: #262626;
+    text-decoration: line-through;
+  }
+  &__text {
+    margin-bottom: 10px;
+    font-size: 11px;
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    .btn {
+      padding: 4px 16px 5px;
+      border-radius: 2px;
+      font-size: 12px;
+    }
+  }
+  &__like {
+    margin-left: 14px;
+    label {
+      cursor: pointer;
+      user-select: none;
+      svg {
+        display: block;
+        fill: #d5d5d5;
+        transition: 0.2s;
+      }
+    }
+    input {
+      display: none;
+      &:checked {
+        ~ label {
+          svg {
+            fill: $red;
+          }
+        }
+      }
+    }
+  }
+  &:hover {
+    .card-recom__img {
+      img {
+        opacity: 0.5;
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__content {
+      padding: 14px 9px 16px;
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__content {
+      position: relative;
+      padding: 13px 13px 31px;
+    }
+    &__like {
+      position: absolute;
+      top: 24px;
+      right: 13px;
+      svg {
+        width: 11px;
+      }
+    }
+    &__bottom {
+      .btn {
+        padding: 7px 20px 6px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-radius: 0;
+      }
+    }
+    &__img {
+      height: 105px;
+    }
+  }
+}

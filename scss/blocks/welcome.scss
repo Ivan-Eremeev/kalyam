@@ -50,7 +50,7 @@
       margin-bottom: 55px;
       .img-responsive {
         &:after {
-          padding-top: 37%;
+          padding-top: 46.5%;
         }
       }
       .slick-dots {
@@ -67,6 +67,7 @@
   }
   @media (max-width: $break_xs) {
     padding-top: 40px;
+    padding-bottom: 37px;
     &__slider {
       margin-bottom: 40px;
       .img-responsive {
@@ -80,7 +81,7 @@
       }
     }
     &__title {
-      font-size: 23px;
+      font-size: 25px;
       margin-bottom: 16px;
     }
     &__text {
