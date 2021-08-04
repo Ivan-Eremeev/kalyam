@@ -1,7 +1,7 @@
 extends blocks/base.pug
 
 block title 
-	title Навигация по страницам
+	title Подтверждение входа
 
 block style-libs
 	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
@@ -10,11 +10,12 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
-	//- link(rel="stylesheet", href="css/libs/slick.css")
+	link(rel="stylesheet", href="css/libs/slick.css")
 	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
 	//- link(rel="stylesheet", href="css/libs/aos.css")
 
 block content
+	include blocks/card-recom.pug
 
 	.page
 
@@ -23,35 +24,25 @@ block content
 		.content.content--align-center
 			.wrapper
 
-				h1 Навигация по страницам
-				ul 
-					li 
-						a(href="home.html") Главная
-					li
-						a(href="registration.html") Регистрация личного кабинета
-					li 
-						a(href="verifytel.html") Подтверждение номера телефона
-					li 
-						a(href="notverify.html") Неверный код
-					li 
-						a(href="enter.html") Вход в личный кабинет
-					li 
-						a(href="password-recovery.html") Восстановление пароля
-					li 
-						a(href="verifyemail.html") Подтверждение входа
-					li 
-						a(href="newpassword.html") Новый пароль
-					li 
-						a(href="404.html") 404
+				// form
+				form(action="#").form
+					.form__text 
+						h1 Подтверждение входа
+						p Для подверждения введите код, отправленный на do@mail.com
+					.form__input
+						input(type="text" placeholder="___-___").mask-verify
+					.form__footer
+						button(type="submit").btn Войти
+				//	/form
 			
 		include blocks/footer.pug
 
 block js-libs
 	script(src="js/libs/jquery.min.js")
 	//- script(src="js/libs/jquery.fancybox.min.js")
-	//- script(src="js/libs/slick.min.js")
+	script(src="js/libs/slick.min.js")
 	//- script(src="js/libs/jquery.matchHeight-min.js")
-	//- script(src="js/libs/jquery.inputmask.min.js")
+	script(src="js/libs/jquery.inputmask.min.js")
 	//- script(src="js/libs/autosize.min.js")
 	//- script(src="js/libs/tooltipster.bundle.min.js")
 	//- script(src="js/libs/jquery.mmenu.min.all.js")

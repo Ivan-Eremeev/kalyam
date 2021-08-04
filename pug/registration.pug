@@ -1,7 +1,7 @@
 extends blocks/base.pug
 
 block title 
-	title Навигация по страницам
+	title Регистрация личного кабинета
 
 block style-libs
 	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
@@ -10,48 +10,44 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
-	//- link(rel="stylesheet", href="css/libs/slick.css")
+	link(rel="stylesheet", href="css/libs/slick.css")
 	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
 	//- link(rel="stylesheet", href="css/libs/aos.css")
 
 block content
+	include blocks/card-recom.pug
 
 	.page
 
 		include blocks/header.pug
 		
 		.content.content--align-center
-			.wrapper
+			.wrapper.wrapper
 
-				h1 Навигация по страницам
-				ul 
-					li 
-						a(href="home.html") Главная
-					li
-						a(href="registration.html") Регистрация личного кабинета
-					li 
-						a(href="verifytel.html") Подтверждение номера телефона
-					li 
-						a(href="notverify.html") Неверный код
-					li 
-						a(href="enter.html") Вход в личный кабинет
-					li 
-						a(href="password-recovery.html") Восстановление пароля
-					li 
-						a(href="verifyemail.html") Подтверждение входа
-					li 
-						a(href="newpassword.html") Новый пароль
-					li 
-						a(href="404.html") 404
+				// form
+				form(action="#").form
+					.form__text
+						h1 Регистрация <br>личного кабинета
+					.form__input
+						input(type="tel" placeholder="Номер телефона").mask-tel
+					.form__input
+						input(type="text" placeholder="Электронная почта").mask-email
+					.form__input
+						input(type="password" placeholder="Придумайте пароль")
+					.form__footer
+						button(type="submit").btn Зарегистрироваться
+						p Уже есть личный кабинет? 
+							a(href="#").form__link Войти
+				//	/form
 			
 		include blocks/footer.pug
 
 block js-libs
 	script(src="js/libs/jquery.min.js")
 	//- script(src="js/libs/jquery.fancybox.min.js")
-	//- script(src="js/libs/slick.min.js")
+	script(src="js/libs/slick.min.js")
 	//- script(src="js/libs/jquery.matchHeight-min.js")
-	//- script(src="js/libs/jquery.inputmask.min.js")
+	script(src="js/libs/jquery.inputmask.min.js")
 	//- script(src="js/libs/autosize.min.js")
 	//- script(src="js/libs/tooltipster.bundle.min.js")
 	//- script(src="js/libs/jquery.mmenu.min.all.js")

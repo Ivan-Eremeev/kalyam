@@ -769,5 +769,15 @@ $(document).ready(function () {
 		});
 	}
 	searchSlide();
-	
+
+	// Masked Input
+	if ($('.mask-tel')) {
+		$('input[type="tel"]').inputmask('+9(999) 999-99-99');
+	}
+	if ($('.mask-email')) {
+		$('.mask-email').inputmask('*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]');
+	}
+	if ($('.mask-verify')) {
+		$('.mask-verify').inputmask('999-999');
+	}
 });
