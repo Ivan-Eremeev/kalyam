@@ -2,6 +2,7 @@
   padding: 80px 0;
   &__row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
   }
   &__sidebar {
@@ -10,5 +11,20 @@
   &__main {
     width: calc(100% - 410px);
     padding-left: 30px;
+  }
+  @media (max-width: $break_lg) {
+    &__sidebar {
+      width: 100%;
+    }
+    &__main {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+  @media (max-width: $break_lg) {
+    padding: 75px 0 0;
+  }
+  @media (max-width: $break_xs) {
+    padding: 40px 0 10px;
   }
 }

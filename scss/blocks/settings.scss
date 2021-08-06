@@ -177,4 +177,7 @@ body {
     }
   }
 }
+.scrollbar-inner > .scroll-element, .scrollbar-inner > .scroll-element div {
+  z-index: 2;
+}
 /* /settings */

@@ -787,4 +787,23 @@ $(document).ready(function () {
 			autoScrollSize: false,
 		});
 	}
+
+	// Смена положения блока при изменении ширины окна
+	// function(блок, куда переместить, куда вернуть)
+	function replace(block, to, from, mediaBreak) {
+		function replaceToggle() {
+			if ($(window).width() <= mediaBreak) { // условие на ширину окна
+				block.appendTo(to); // Переместить блок
+			} else {
+				block.appendTo(from); // Вернуть блок обратно
+			}
+		}
+		replaceToggle();
+		$(window).resize(function () {
+			replaceToggle();
+		})
+		
+	}
+	replace($('#active-orders'), $('#to'), $('#from'), breakLg);
+
 });
