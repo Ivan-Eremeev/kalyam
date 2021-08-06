@@ -1,0 +1,71 @@
+.lk {
+  padding: 45px 45px 35px;
+  background: #FFFFFF;
+  box-shadow: 0px 12px 53px rgba(0, 0, 0, 0.06);
+  border-radius: 5px;
+  margin-bottom: 30px;
+  position: relative;
+  &__title {
+    font-weight: 600;
+    font-size: 26px;
+    color: #060606;
+    margin-bottom: 18px;
+  }
+  &__list {
+    font-size: 22px;
+    margin-bottom: 25px;
+    li {
+      display: flex;
+      padding-left: 30px;
+      position: relative;
+      margin-bottom: 7px;
+    }
+    span {
+      color: #848484;
+    }
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3px;
+    left: 0;
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 21px;
+    margin-bottom: 10px;
+    a {
+      color: $green;
+      &:hover {
+        color: $greenL;
+      }
+    }
+  }
+  &__edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 43px;
+    box-shadow: 0px 4px 13px rgba(6, 6, 6, 0.1);
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    svg {
+      width: 21px;
+      height: 21px;
+      fill: #515151;
+      transition: 0.2s;
+    }
+    &:hover {
+      svg {
+        fill: $green;
+      }
+    }
+  }
+}

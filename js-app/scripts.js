@@ -770,14 +770,21 @@ $(document).ready(function () {
 	}
 	searchSlide();
 
-	// Masked Input
-	if ($('.mask-tel')) {
+	// Inputmask
+	if ($('.mask-tel').length) {
 		$('input[type="tel"]').inputmask('+9(999) 999-99-99');
 	}
-	if ($('.mask-email')) {
+	if ($('.mask-email').length) {
 		$('.mask-email').inputmask('*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]');
 	}
-	if ($('.mask-verify')) {
+	if ($('.mask-verify').length) {
 		$('.mask-verify').inputmask('999-999');
+	}
+
+	// JQueryScrollbar
+	if ($('.scrollbar-inner').length) {
+		$('.scrollbar-inner').scrollbar({
+			autoScrollSize: false,
+		});
 	}
 });

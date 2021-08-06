@@ -1,0 +1,14 @@
+.lk-page {
+  padding: 80px 0;
+  &__row {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__sidebar {
+    width: 410px;
+  }
+  &__main {
+    width: calc(100% - 410px);
+    padding-left: 30px;
+  }
+}

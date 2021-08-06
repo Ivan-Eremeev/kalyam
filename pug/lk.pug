@@ -1,0 +1,167 @@
+extends blocks/base.pug
+
+block title 
+	title Личный аккаунт
+
+block style-libs
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	//- link(rel="stylesheet", href="css/libs/slick.css")
+	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/aos.css")
+
+block content
+	include blocks/card-recom.pug
+
+	.page
+
+		include blocks/header.pug
+		
+		.content
+			.wrapper.wrapper
+
+				// lk-page
+				.lk-page
+					.lk-page__row 
+						.lk-page__sidebar
+							// lk
+							.lk
+								.lk__title Личный кабинет
+								ul.lk__list 
+									li 
+										.lk__icon
+											img(src="img/user_2.svg", alt="")
+										span Александр Гуренко
+									li 
+										.lk__icon
+											img(src="img/tel.svg", alt="")
+										span +7 900 323 60 10
+									li 
+										.lk__icon
+											img(src="img/mail.svg", alt="")
+										span kalum@gmail.com
+								.lk__link
+									a(href="#") Восстановить пароль →
+								.lk__link
+									a(href="#") Связь с менеджером по заказам →
+								a(href="#").lk__edit
+									<svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0 16.6219V20.9975H4.37559L17.2865 8.08653L12.9109 3.71094L0 16.6219Z"/>
+										<path d="M20.6586 3.06581L17.9341 0.341296C17.479 -0.113765 16.7381 -0.113765 16.283 0.341296L14.1477 2.47659L18.5233 6.85218L20.6586 4.71689C21.1137 4.26183 21.1137 3.52088 20.6586 3.06581Z"/>
+									</svg>
+
+							// /lk
+
+							// history-list
+							.history-list
+								.history-list__title История заказов
+								.history-list__block.scrollbar-inner
+									.history-list__inner
+										ul.history-list__list 
+											li 
+												a(href="#") 21 февраля 2021
+											li 
+												a(href="#") 26 февраля 2021
+											li 
+												a(href="#") 7 марта 2021 
+											li 
+												a(href="#") 23 апреля 2021
+											li 
+												a(href="#") 1 июня 2021
+											li 
+												a(href="#") 20 июля 2021 
+											li 
+												a(href="#") 21 февраля 2021
+											li 
+												a(href="#") 26 февраля 2021
+											li 
+												a(href="#") 7 марта 2021 
+											li 
+												a(href="#") 23 апреля 2021
+							//	/history-list
+
+						.lk-page__main
+							// active-orders
+							.active-orders
+								.active-orders__scroll.scrollbar-inner
+									.active-orders__inner 
+										.active-orders__title Активные заказы
+										.active-orders__block 
+											.active-orders__row 
+												.active-orders__img
+													img(src="img/product_1.jpg", alt="")
+												.active-orders__content 
+													.active-orders__subtitle Настольная карточная игра UNO Уно
+													ul.active-orders__list 
+														li Статус заказа: обработка заказа
+														li Артикул: 1230
+														li Количество: 1 шт
+														li Cтоимость с доставкой: 230руб
+														li Дата доставки: 12 июля 2021 года, 10.00-12.00
+														li Способ получения: отправка курьером
+														li Способ оплаты: наличными при получении 
+														li Адрес доставки: ул. Фатыха Амирхана, 26, 116кв.
+														li Номер заказа: 1201
+														li Получатель: Григорьев Александр Павлович
+
+										.active-orders__block 
+											.active-orders__row 
+												.active-orders__img
+													img(src="img/product_1.jpg", alt="")
+												.active-orders__content 
+													.active-orders__subtitle Настольная карточная игра UNO Уно
+													ul.active-orders__list 
+														li Статус заказа: обработка заказа
+														li Артикул: 1230
+														li Количество: 1 шт
+														li Cтоимость с доставкой: 230руб
+														li Дата доставки: 12 июля 2021 года, 10.00-12.00
+														li Способ получения: отправка курьером
+														li Способ оплаты: наличными при получении 
+														li Адрес доставки: ул. Фатыха Амирхана, 26, 116кв.
+														li Номер заказа: 1201
+														li Получатель: Григорьев Александр Павлович
+
+										.active-orders__block 
+											.active-orders__row 
+												.active-orders__img
+													img(src="img/product_1.jpg", alt="")
+												.active-orders__content 
+													.active-orders__subtitle Настольная карточная игра UNO Уно
+													ul.active-orders__list 
+														li Статус заказа: обработка заказа
+														li Артикул: 1230
+														li Количество: 1 шт
+														li Cтоимость с доставкой: 230руб
+														li Дата доставки: 12 июля 2021 года, 10.00-12.00
+														li Способ получения: отправка курьером
+														li Способ оплаты: наличными при получении 
+														li Адрес доставки: ул. Фатыха Амирхана, 26, 116кв.
+														li Номер заказа: 1201
+														li Получатель: Григорьев Александр Павлович
+							//	/active-orders
+				//	/lk-page
+			
+		include blocks/footer.pug
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	script(src="js/libs/jquery.scrollbar.min.js")
+	//- script(src="js/libs/aos.js")
+	//- script(src="js/libs/circle-progress.min.js")
+	//- script(src="js/libs/bootstrap.bundle.min.js") 
+	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")

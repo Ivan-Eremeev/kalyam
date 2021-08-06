@@ -51,6 +51,12 @@
       border-color: $green;
     }
   }
+  &__shadowblock {
+    padding: 50px 30px 32px;
+    background: #FFFFFF;
+    box-shadow: 0px 12px 53px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+  }
   @media (max-width: $break_sm) {
     max-width: 380px;
   }
@@ -61,11 +67,16 @@
     &__input {
       margin-bottom: 8px;
       input {
+        padding: 0 20px;
         font-size: 16px;
       }
     }
     &__footer {
       font-size: 16px;
+    }
+    &__shadowblock {
+      padding: 0 20px;
+      box-shadow: none;
     }
   }
 }

@@ -2,10 +2,11 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>Восстановление пароля</title>
+		<title>Личный аккаунт</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
+		<link rel="stylesheet" href="css/libs/jquery.scrollbar.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -201,22 +202,129 @@
 				</div>
 			</header>
 			<!-- /header-->
-			<div class="content content--align-center">
-				<div class="wrapper">
-					<!-- form-->
-					<form class="form" action="#">
-						<div class="form__text">
-							<h1>Восстановление пароля</h1>
-							<p>Введите номер телефона/почту, на который зарегистрирован личный кабинет</p>
+			<div class="content">
+				<div class="wrapper wrapper">
+					<!-- lk-page-->
+					<div class="lk-page">
+						<div class="lk-page__row"> 
+							<div class="lk-page__sidebar">
+								<!-- lk-->
+								<div class="lk">
+									<div class="lk__title">Личный кабинет</div>
+									<ul class="lk__list"> 
+										<li> 
+											<div class="lk__icon"><img src="img/user_2.svg" alt=""></div><span>Александр Гуренко</span>
+										</li>
+										<li> 
+											<div class="lk__icon"><img src="img/tel.svg" alt=""></div><span>+7 900 323 60 10</span>
+										</li>
+										<li> 
+											<div class="lk__icon"><img src="img/mail.svg" alt=""></div><span>kalum@gmail.com</span>
+										</li>
+									</ul>
+									<div class="lk__link"><a href="#">Восстановить пароль →</a></div>
+									<div class="lk__link"><a href="#">Связь с менеджером по заказам →</a></div><a class="lk__edit" href="#"><svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 16.6219V20.9975H4.37559L17.2865 8.08653L12.9109 3.71094L0 16.6219Z"/>
+<path d="M20.6586 3.06581L17.9341 0.341296C17.479 -0.113765 16.7381 -0.113765 16.283 0.341296L14.1477 2.47659L18.5233 6.85218L20.6586 4.71689C21.1137 4.26183 21.1137 3.52088 20.6586 3.06581Z"/>
+</svg></a>
+								</div>
+								<!-- /lk-->
+								<!-- history-list-->
+								<div class="history-list">
+									<div class="history-list__title">История заказов</div>
+									<div class="history-list__block scrollbar-inner">
+										<div class="history-list__inner">
+											<ul class="history-list__list"> 
+												<li> <a href="#">21 февраля 2021</a></li>
+												<li> <a href="#">26 февраля 2021</a></li>
+												<li> <a href="#">7 марта 2021 </a></li>
+												<li> <a href="#">23 апреля 2021</a></li>
+												<li> <a href="#">1 июня 2021</a></li>
+												<li> <a href="#">20 июля 2021 </a></li>
+												<li> <a href="#">21 февраля 2021</a></li>
+												<li> <a href="#">26 февраля 2021</a></li>
+												<li> <a href="#">7 марта 2021 </a></li>
+												<li> <a href="#">23 апреля 2021</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!--	/history-list-->
+							</div>
+							<div class="lk-page__main">
+								<!-- active-orders-->
+								<div class="active-orders">
+									<div class="active-orders__scroll scrollbar-inner">
+										<div class="active-orders__inner"> 
+											<div class="active-orders__title">Активные заказы</div>
+											<div class="active-orders__block"> 
+												<div class="active-orders__row"> 
+													<div class="active-orders__img"><img src="img/product_1.jpg" alt=""></div>
+													<div class="active-orders__content"> 
+														<div class="active-orders__subtitle">Настольная карточная игра UNO Уно</div>
+														<ul class="active-orders__list"> 
+															<li>Статус заказа: обработка заказа</li>
+															<li>Артикул: 1230</li>
+															<li>Количество: 1 шт</li>
+															<li>Cтоимость с доставкой: 230руб</li>
+															<li>Дата доставки: 12 июля 2021 года, 10.00-12.00</li>
+															<li>Способ получения: отправка курьером</li>
+															<li>Способ оплаты: наличными при получении </li>
+															<li>Адрес доставки: ул. Фатыха Амирхана, 26, 116кв.</li>
+															<li>Номер заказа: 1201</li>
+															<li>Получатель: Григорьев Александр Павлович</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="active-orders__block"> 
+												<div class="active-orders__row"> 
+													<div class="active-orders__img"><img src="img/product_1.jpg" alt=""></div>
+													<div class="active-orders__content"> 
+														<div class="active-orders__subtitle">Настольная карточная игра UNO Уно</div>
+														<ul class="active-orders__list"> 
+															<li>Статус заказа: обработка заказа</li>
+															<li>Артикул: 1230</li>
+															<li>Количество: 1 шт</li>
+															<li>Cтоимость с доставкой: 230руб</li>
+															<li>Дата доставки: 12 июля 2021 года, 10.00-12.00</li>
+															<li>Способ получения: отправка курьером</li>
+															<li>Способ оплаты: наличными при получении </li>
+															<li>Адрес доставки: ул. Фатыха Амирхана, 26, 116кв.</li>
+															<li>Номер заказа: 1201</li>
+															<li>Получатель: Григорьев Александр Павлович</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="active-orders__block"> 
+												<div class="active-orders__row"> 
+													<div class="active-orders__img"><img src="img/product_1.jpg" alt=""></div>
+													<div class="active-orders__content"> 
+														<div class="active-orders__subtitle">Настольная карточная игра UNO Уно</div>
+														<ul class="active-orders__list"> 
+															<li>Статус заказа: обработка заказа</li>
+															<li>Артикул: 1230</li>
+															<li>Количество: 1 шт</li>
+															<li>Cтоимость с доставкой: 230руб</li>
+															<li>Дата доставки: 12 июля 2021 года, 10.00-12.00</li>
+															<li>Способ получения: отправка курьером</li>
+															<li>Способ оплаты: наличными при получении </li>
+															<li>Адрес доставки: ул. Фатыха Амирхана, 26, 116кв.</li>
+															<li>Номер заказа: 1201</li>
+															<li>Получатель: Григорьев Александр Павлович</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--	/active-orders-->
+							</div>
 						</div>
-						<div class="form__input">
-							<input type="text" placeholder="Номер телефона или почта">
-						</div>
-						<div class="form__footer">
-							<button class="btn" type="submit">Восстановить</button>
-						</div>
-					</form>
-					<!--	/form-->
+					</div>
+					<!--	/lk-page-->
 				</div>
 			</div>
 			<!-- footer-->
@@ -272,6 +380,7 @@
 			<!-- /footer-->
 		</div>
 		<script src="js/libs/jquery.min.js"></script>
+		<script src="js/libs/jquery.scrollbar.min.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>

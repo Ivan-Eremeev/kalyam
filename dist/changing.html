@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>Восстановление пароля</title>
+		<title>Изменение персональных данных</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
@@ -202,18 +202,30 @@
 			</header>
 			<!-- /header-->
 			<div class="content content--align-center">
-				<div class="wrapper">
+				<div class="wrapper wrapper">
 					<!-- form-->
 					<form class="form" action="#">
 						<div class="form__text">
-							<h1>Восстановление пароля</h1>
-							<p>Введите номер телефона/почту, на который зарегистрирован личный кабинет</p>
+							<h1>Изменение персональных данных</h1>
 						</div>
-						<div class="form__input">
-							<input type="text" placeholder="Номер телефона или почта">
-						</div>
-						<div class="form__footer">
-							<button class="btn" type="submit">Восстановить</button>
+						<div class="form__shadowblock">
+							<div class="form__input">
+								<input type="text" placeholder="Имя">
+								<div class="form__input"></div>
+								<input type="text" placeholder="Фамилия">
+							</div>
+							<div class="form__input">
+								<input class="mask-tel" type="tel" placeholder="Номер телефона">
+							</div>
+							<div class="form__input">
+								<input class="mask-email" type="text" placeholder="Электронная почта">
+							</div>
+							<div class="form__input">
+								<input type="password" placeholder="Придумайте пароль">
+							</div>
+							<div class="form__footer">
+								<button class="btn" type="submit">Изменить</button>
+							</div>
 						</div>
 					</form>
 					<!--	/form-->
@@ -272,6 +284,7 @@
 			<!-- /footer-->
 		</div>
 		<script src="js/libs/jquery.min.js"></script>
+		<script src="js/libs/jquery.inputmask.min.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>

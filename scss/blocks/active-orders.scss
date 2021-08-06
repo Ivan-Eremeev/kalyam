@@ -1,0 +1,67 @@
+.active-orders {
+  background: #FFFFFF;
+  box-shadow: 0px 12px 53px rgba(0, 0, 0, 0.06);
+  border-radius: 5px;
+  overflow: hidden;
+  &__scroll {
+    max-height: 790px;
+  }
+  &__inner {
+    padding: 45px 80px 45px 45px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 26px; 
+    color: #060606;
+    margin-bottom: 25px;
+  }
+  &__block {
+    border: 0.7px solid #D9D9D9;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 22px;
+  }
+  &__row {
+    display: flex;
+  }
+  &__img {
+    width: 31%;
+    border-right: 0.7px solid #D9D9D9;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    width: 69%;
+    padding: 25px;
+    background: #F7F7F7;
+    border-radius: 4px;
+  }
+  &__subtitle {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 130%;
+    color: #060606;
+    margin-bottom: 11px;
+  }
+  &__list {
+    font-size: 18px;
+    li {
+      margin-bottom: 1px;
+    }
+  }
+  .scrollbar-inner > .scroll-element.scroll-y {
+    width: 12px;
+    background: #E1E1E1;
+  }
+  .scrollbar-inner > .scroll-element .scroll-element_outer, .scrollbar-inner > .scroll-element .scroll-element_track, .scrollbar-inner > .scroll-element .scroll-bar {
+    border-radius: 1px;
+    cursor: pointer;
+    opacity: 1;
+  }
+  .scroll-bar {
+    height: 36px !important;
+  }
+}

@@ -1,7 +1,7 @@
 extends blocks/base.pug
 
 block title 
-	title Неверный код
+	title Изменение персональных данных
 
 block style-libs
 	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
@@ -22,19 +22,25 @@ block content
 		include blocks/header.pug
 		
 		.content.content--align-center
-			.wrapper
+			.wrapper.wrapper
 
 				// form
 				form(action="#").form
-					.form__text 
-						h1 Неверный код
-						p Попробуйте ввести код еще раз
-					.form__input
-						input(type="text" placeholder="___-___").mask-verify
-					.form__footer
-						button(type="submit").btn Подтвердить
-						p Не пришел код? 
-							a(href="#").form__link Выслать повторно
+					.form__text
+						h1 Изменение персональных данных
+					.form__shadowblock
+						.form__input
+							input(type="text" placeholder="Имя")
+							.form__input
+							input(type="text" placeholder="Фамилия")
+						.form__input
+							input(type="tel" placeholder="Номер телефона").mask-tel
+						.form__input
+							input(type="text" placeholder="Электронная почта").mask-email
+						.form__input
+							input(type="password" placeholder="Придумайте пароль")
+						.form__footer
+							button(type="submit").btn Изменить
 				//	/form
 			
 		include blocks/footer.pug
