@@ -2,10 +2,12 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>Навигация по страницам</title>
+		<title>История заказа</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
+		<link rel="stylesheet" href="css/libs/jquery.scrollbar.css">
+		<link rel="stylesheet" href="css/libs/slick.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -201,23 +203,46 @@
 				</div>
 			</header>
 			<!-- /header-->
-			<div class="content content--align-center">
-				<div class="wrapper">
-					<h1>Навигация по страницам</h1>
-					<ul> 
-						<li> <a href="home.html">Главная</a></li>
-						<li><a href="registration.html">Регистрация личного кабинета</a></li>
-						<li> <a href="verifytel.html">Подтверждение номера телефона</a></li>
-						<li> <a href="notverify.html">Неверный код</a></li>
-						<li> <a href="enter.html">Вход в личный кабинет</a></li>
-						<li> <a href="password-recovery.html">Восстановление пароля</a></li>
-						<li> <a href="verifyemail.html">Подтверждение входа</a></li>
-						<li> <a href="newpassword.html">Новый пароль</a></li>
-						<li> <a href="404.html">404</a></li>
-						<li><a href="changing.html">Изменение персональных данных</a></li>
-						<li> <a href="lk.html">Личный аккаунт</a></li>
-						<li> <a href="history-product.html">История заказа</a></li>
-					</ul>
+			<div class="content">
+				<div class="wrapper wrapper">
+					<!-- product-->
+					<div class="product">
+						<div class="product__row">
+							<div class="product__slider"> 
+								<div id="product-slider">
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+								</div>
+								<div id="product-slider-nav">
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+								</div>
+							</div>
+							<div class="product__content">
+								<div class="product__title">Настольная карточная игра UNO Уно</div>
+								<div class="product__price">169 руб</div>
+								<ul class="product__list"> 
+									<li>Артикул: 1230</li>
+									<li>Статус заказа: обработка заказа</li>
+									<li>Количество: 1 шт</li>
+									<li>Cтоимость с доставкой: 230руб</li>
+									<li>Дата доставки: 12 июля 2021 года, 10.00-12.00</li>
+									<li>Способ получения: отправка курьером</li>
+									<li>Способ оплаты: наличными при получении </li>
+									<li>Адрес доставки: ул. Фатыха Амирхана, 26, 116кв.</li>
+									<li>Номер заказа: 1201</li>
+									<li>Получатель: Григорьев Александр Павлович</li>
+								</ul>
+								<div class="product__result">Итого: 369 рублей</div>
+								<div class="btn">Заказать повторно</div>
+							</div>
+						</div>
+					</div>
+					<!--	/product-->
 				</div>
 			</div>
 			<!-- footer-->
@@ -273,6 +298,8 @@
 			<!-- /footer-->
 		</div>
 		<script src="js/libs/jquery.min.js"></script>
+		<script src="js/libs/slick.min.js"></script>
+		<script src="js/libs/jquery.scrollbar.min.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>

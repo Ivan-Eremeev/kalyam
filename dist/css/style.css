@@ -2101,3 +2101,137 @@ body.lock {
     margin-bottom: 4px;
   }
 }
+
+.product {
+  max-width: 1050px;
+  padding: 80px 0 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.product__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.product__slider {
+  width: 38%;
+}
+.product__slider .img-responsive {
+  display: block !important;
+}
+.product__slider .img-responsive:after {
+  padding-top: 100%;
+}
+.product__slider #product-slider {
+  border: 1px solid #D5D5D5;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.product__slider #product-slider-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+.product__slider #product-slider-nav .slick-list {
+  margin: 0 -10px;
+}
+.product__slider #product-slider-nav .slick-slide {
+  margin: 0 10px;
+}
+.product__slider #product-slider-nav .img-responsive {
+  border: 1px solid #D5D5D5;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.product__content {
+  width: 62%;
+  padding-left: 45px;
+}
+.product__title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #060606;
+  margin-bottom: 16px;
+}
+.product__price {
+  font-size: 25px;
+  font-weight: 600;
+  color: #F32E2E;
+  margin-bottom: 12px;
+}
+.product__list {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.product__list li {
+  margin-bottom: 4px;
+}
+.product__result {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0ACA43;
+  margin-bottom: 20px;
+}
+.product .btn {
+  padding: 15px 50px 14px;
+}
+@media (max-width: 1050px) {
+  .product__slider {
+    width: 100%;
+    max-width: 470px;
+    margin-bottom: 32px;
+  }
+  .product__content {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+@media (max-width: 769px) {
+  .product {
+    padding: 75px 0 20px;
+  }
+  .product__price {
+    margin-bottom: 14px;
+  }
+  .product__list {
+    margin-bottom: 32px;
+  }
+  .product .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .product {
+    padding: 40px 0;
+  }
+  .product__title {
+    font-size: 22px;
+  }
+  .product__price {
+    font-size: 18px;
+  }
+  .product__list {
+    font-size: 14px;
+  }
+  .product__result {
+    font-size: 18px;
+  }
+  .product .btn {
+    padding: 15px 40px;
+  }
+  .product__slider {
+    margin-bottom: 47px;
+  }
+  .product #product-slider {
+    margin-bottom: 12px;
+  }
+  .product #product-slider-nav .slick-list {
+    margin: 0 -6px;
+  }
+  .product #product-slider-nav .slick-slide {
+    margin: 0 6px;
+  }
+}

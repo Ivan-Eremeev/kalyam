@@ -1,0 +1,85 @@
+extends blocks/base.pug
+
+block title 
+	title История заказа
+
+block style-libs
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	link(rel="stylesheet", href="css/libs/slick.css")
+	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/aos.css")
+
+block content
+	include blocks/card-recom.pug
+
+	.page
+
+		include blocks/header.pug
+		
+		.content
+			.wrapper.wrapper
+
+				// product
+				.product
+					.product__row
+						.product__slider 
+							#product-slider
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+							#product-slider-nav
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+						.product__content
+							.product__title Настольная карточная игра UNO Уно
+							.product__price 169 руб
+							ul.product__list 
+								li Артикул: 1230
+								li Статус заказа: обработка заказа
+								li Количество: 1 шт
+								li Cтоимость с доставкой: 230руб
+								li Дата доставки: 12 июля 2021 года, 10.00-12.00
+								li Способ получения: отправка курьером
+								li Способ оплаты: наличными при получении 
+								li Адрес доставки: ул. Фатыха Амирхана, 26, 116кв.
+								li Номер заказа: 1201
+								li Получатель: Григорьев Александр Павлович
+							.product__result Итого: 369 рублей
+							.btn Заказать повторно
+				//	/product
+			
+		include blocks/footer.pug
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	script(src="js/libs/jquery.scrollbar.min.js")
+	//- script(src="js/libs/aos.js")
+	//- script(src="js/libs/circle-progress.min.js")
+	//- script(src="js/libs/bootstrap.bundle.min.js") 
+	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")
