@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     height: 75px;
+    transition: 0.3s;
   }
   .btn {
     margin: 0 20px;
@@ -19,6 +20,11 @@
     margin-right: 20px;
     position: relative;
     z-index: 12;
+  }
+  &.stiky {
+    .header__container {
+      height: 60px;
+    }
   }
   @media (max-width: $break_xs) {
     &__hamb {

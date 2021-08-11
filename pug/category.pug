@@ -1,0 +1,139 @@
+extends blocks/base.pug
+
+block title 
+	title История заказа
+
+block style-libs
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	//- link(rel="stylesheet", href="css/libs/slick.css")
+	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/aos.css")
+
+block content
+	include blocks/card.pug
+
+	.page
+
+		include blocks/header.pug
+		
+		.content
+			.wrapper
+
+				// category
+				.category
+					.category__row 
+						aside.category__sidebar 
+							// filters
+							form(action="#").filters
+								.filters__bntmob.js-drop-btn(data-drop="filters") Фильтры товаров
+								.filters__nav.js-drop#filters
+									.filters__title Фильтры товаров
+									.filters__select 
+										.filters__trigger.js-drop-btn(data-drop="filtersNav") Ручки
+											<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14 1L7.5 8L1 0.999999"/>
+											</svg>
+										.filters__drop.js-drop#filtersNav
+											ul.filters__list
+												li.filters__item
+													a(href="#") Название товара 
+												li.filters__item
+													a(href="#") Название товара 
+												li.filters__item
+													a(href="#") Название товара 
+												li.filters__item
+													a(href="#") Название товара 
+												li.filters__item
+													a(href="#") Название товара 
+												li.filters__item
+													a(href="#") Название товара 
+												li.filters__item
+													a(href="#") Название товара 
+												li.filters__item
+													a(href="#") Название товара 
+												li.filters__item
+													a(href="#") Название товара 
+												li.filters__item
+													a(href="#") Название товара 
+												li.filters__item
+													a(href="#") Название товара 
+												li.filters__item
+													a(href="#") Название товара 
+									ul.filters__checklist 
+										li 	
+											span.filters__check 
+												input#filter_check_1(type="radio" name="checklist" checked)
+												label(for="filter_check_1") Сначала дешёвые
+												label(for="filter_check_1").filters__checkbox
+										li
+											span.filters__check 
+												input#filter_check_2(type="radio" name="checklist")
+												label(for="filter_check_2") Сначала дорогие
+												label(for="filter_check_2").filters__checkbox
+										li
+											span.filters__check 
+												input#filter_check_3(type="radio" name="checklist")
+												label(for="filter_check_3") Лучшие предложения
+												label(for="filter_check_3").filters__checkbox
+										li
+											span.filters__check 
+												input#filter_check_4(type="radio" name="checklist")
+												label(for="filter_check_4") Товары со скидкой
+												label(for="filter_check_4").filters__checkbox
+									.filters__views
+										.filters__view#viewTile.active
+											<svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<rect x="0.75" y="0.75" width="8.42533" height="8.42533" rx="1.25" stroke-width="1.5"  fill="none"/>
+												<rect x="0.75" y="11.8281" width="8.42533" height="8.42533" rx="1.25" stroke-width="1.5"  fill="none"/>
+												<rect x="11.8252" y="11.8281" width="8.42533" height="8.42533" rx="1.25" stroke-width="1.5"  fill="none"/>
+												<rect x="11.8252" y="0.75" width="8.42533" height="8.42533" rx="1.25" stroke-width="1.5"  fill="none"/>
+											</svg>
+										.filters__view#viewList
+											<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M2 2H19" stroke-width="3" stroke-linecap="round" fill="none"/>
+												<path d="M2 15.5996H19" stroke-width="3" stroke-linecap="round" fill="none"/>
+												<path d="M2 8.80078H19" stroke-width="3" stroke-linecap="round" fill="none"/>
+											</svg>
+									button(type="submit").btn Искать по фильтрам
+							//	/filters
+						main.category__main
+							.row
+								.category__col
+									+card('1')
+								.category__col
+									+card('2')
+								.category__col
+									+card('3')
+								.category__col
+									+card('4')
+								.category__col
+									+card('5')
+								.category__col
+									+card('6')
+				
+				//	/category
+			
+		include blocks/footer.pug
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	//- script(src="js/libs/jquery.scrollbar.min.js")
+	//- script(src="js/libs/aos.js")
+	//- script(src="js/libs/circle-progress.min.js")
+	//- script(src="js/libs/bootstrap.bundle.min.js") 
+	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")

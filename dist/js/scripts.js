@@ -218,18 +218,18 @@ $(document).ready(function () {
 	// };
 	// menuScroll();
 
-	// // Stiky menu // Липкое меню.
-	// function stikyMenu(header) {
-	// 	headerTop = header.offset().top;
-	// 	$(window).scroll(function(){
-	// 		if( $(window).scrollTop() > headerTop ) {
-	// 			header.addClass('stiky');
-	// 		} else {
-	// 			header.removeClass('stiky');
-	// 		}
-	// 	});
-	// };
-	// stikyMenu();
+	// Stiky menu // Липкое меню.
+	function stikyMenu(header) {
+		headerTop = header.offset().top;
+		$(window).scroll(function(){
+			if( $(window).scrollTop() > headerTop ) {
+				header.addClass('stiky');
+			} else {
+				header.removeClass('stiky');
+			}
+		});
+	};
+	stikyMenu($('#header'));
 
 	// // Изменяет размер шрифта у тэга html взависимости от размера экрана (для резиновых страниц)(размеры должны быть в em)
 	// function fontResize() {
@@ -933,5 +933,31 @@ $(document).ready(function () {
 		
 	}
 	replace($('#active-orders'), $('#to'), $('#from'), breakLg);
+
+	// Изменение вида каталога
+	function catalogView() {
+		var btn = $('.filters__view'),
+				card = $('.card'),
+				col = $('.category__col');
+		btn.on('click', function () {
+			if (!$(this).hasClass('active')) {
+				var $this = $(this);
+				if ($this.attr('id') == 'viewTile') {
+					btn.removeClass('active');
+					$this.addClass('active');
+					card.removeClass('card--list');
+					col.removeClass('category__col--list');
+				}else if ($this.attr('id') == 'viewList') {
+					btn.removeClass('active');
+					$this.addClass('active');
+					card.addClass('card--list')
+					col.addClass('category__col--list')
+				}
+			}else {
+				return false;
+			}
+		})
+	}
+	catalogView();
 
 });

@@ -1,0 +1,191 @@
+.filters {
+  &__title {
+    font-size: 25px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 32px;
+  }
+  &__select {
+    position: relative;
+    font-size: 18px;
+    color: #828282;
+    margin-bottom: 25px;
+  }
+  &__trigger {
+    padding: 13px 30px 12px 18px;
+    border: 0.7px solid #828282;
+    border-radius: 3px;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    svg {
+      stroke: #828282;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      transition: 0.5s;
+    }
+    &:hover {
+      color: $green;
+      svg {
+        stroke: $green;
+      }
+    }
+    &.is-active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__drop {
+    width: 100%;
+    opacity: 0;
+    transform: translate(0,50px);
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: 0.5s;
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0,0);
+      background-color: #fff;
+    }
+  }
+  &__list {
+    border: 0.7px solid #828282;
+    border-radius: 5px;
+    li {
+      &:not(:last-child) {
+        border-bottom: 0.7px solid #828282;
+      }
+    }
+    a {
+      display: block;
+      color: #828282;
+      padding: 13px 23px 12px;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+  &__checklist {
+    font-size: 20px;
+    color: #060606;
+    margin-bottom: 24px;
+    li {
+      margin-bottom: 6px;
+    }
+  }
+  &__check {
+    display: inline-flex;
+    align-items: center;
+    input {
+      display: none;
+      &:checked {
+        ~ .filters__checkbox {
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    label {
+      user-select: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    &:hover {
+      label {
+        color: $green;
+        border-color: $green;
+      }
+    }
+  }
+  &__checkbox {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #000;
+    margin-left: 12px;
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5L4.5 8L10 0.5' stroke='black'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      text-replace: 0.2s;
+    }
+  }
+  &__views {
+    display: flex;
+    align-items: center;
+    margin-left: -10px;
+    margin-bottom: 32px;
+  }
+  &__view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    margin-left: 10px;
+    background-color: #D4D4D4;
+    box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    svg {
+      stroke: #9B9B9B;
+    }
+    &.active {
+      svg {
+        stroke: #515151;
+      }
+    }
+  }
+  .btn {
+    width: 100%;
+    padding: 15px 30px 14px;
+    font-size: 25px;
+  }
+  &__bntmob {
+    display: none;
+  }
+  @media (max-width: $break_md) {
+    position: relative;
+    &__bntmob {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 600;
+      color: #060606;
+      margin-bottom: 32px;
+    }
+    &__nav {
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(0,50px);
+      transition: 0.5s;
+      &.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0,0);
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__views {
+      display: none;
+    }
+  }
+}

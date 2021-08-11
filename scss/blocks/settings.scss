@@ -180,4 +180,16 @@ body {
 .scrollbar-inner > .scroll-element, .scrollbar-inner > .scroll-element div {
   z-index: 2;
 }
+
+@keyframes favorite {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* /settings */
