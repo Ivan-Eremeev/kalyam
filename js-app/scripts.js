@@ -659,44 +659,64 @@ $(document).ready(function () {
 	// hideListItems();
 
 	// Выпадайки при клике по кнопке
-	// Задать блокам выпадайкам .js-drop и айдишник совпадающий с data-drop="" в кнопке для этого блока
+	// Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока
 	// Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
-	function DropBlock(drop, button) {
-		var close = $('.js-drop-close'),
-				dropThis = undefined;
+	function DropBlock(button) {
+		var dropThis = [], // создаем массивы для кнопок и выпадаек
+				thisBtn = [],
+				close = $('.js-drop-close');
 		button.on('click', function (e) { // клик по кнопке
 			e.preventDefault();
-			var $this = $(this),
-					data = $this.data('drop');
-			dropThis = $('#' + data);
-			console.log(dropThis);
-			if (!$this.hasClass('is-active')) { // если имеет класс .is-active скрываем все выпадайки и открываем только относящуюся к кнопке
-				drop.removeClass('open');
-				button.removeClass('is-active');
-				$this.addClass('is-active');
-				dropThis.addClass('open');
-			} else { // если не имеет класс .active скрываем все выпадайки
-				$this.removeClass('is-active');
-				dropThis.removeClass('open');
+			if (!$(this).hasClass('is-active')) { // проверка на класс. добавляем классы и элементы в массивы
+				thisBtn.push($(this));
+				dropThis.push($('#' + $(this).data('drop')));
+				thisBtn[thisBtn.length - 1].addClass('is-active');
+				dropThis[dropThis.length - 1].addClass('open');
+				console.log(dropThis, thisBtn, 'dd');
+
+			} else { // проверка на класс. удаляем классы и последние элементы из массивов
+				thisBtn[thisBtn.length - 1].removeClass('is-active');
+				dropThis[dropThis.length - 1].removeClass('open');
+				thisBtn.pop();
+				dropThis.pop();
 			}
 		})
 		close.on('click', function () {
-			console.log('dd');
-			dropThis.removeClass('open');
+			$('#' + $(this).data('drop')).removeClass('open');
+			$('[data-drop="' + $(this).data('drop') + '"]').removeClass('is-active');
+			console.log('rr');
+			dropThis.forEach(element => {
+				if (element.attr('id') == $(this).data('drop')) {
+					console.log(element.index());
+					dropThis.splice(element.index() - 1,1);
+				}
+			});
+			thisBtn.forEach(element => {
+				if (element.attr('data-drop') == $(this).data('drop')) {
+					console.log(element.index());
+
+					thisBtn.splice(element.index(),1);
+				}
+			});
+			console.log(dropThis, thisBtn);
 		})
-		$(document).mouseup(function (e) { // клик по любому месту страницы вне блока (скрываем все выпадайки)
-			if (!drop.is(e.target)
-				&& drop.has(e.target).length === 0
-				&& !button.is(e.target)
-				&& button.has(e.target).length === 0) {
-				drop.removeClass('open');
-				button.removeClass('is-active');
+		$(document).mouseup(function (e) { // клик по любому месту страницы вне блока. удаляем классы и последние элементы из массивов
+			if (dropThis.length && thisBtn.length) {
+				if (!dropThis[dropThis.length - 1].is(e.target)
+					&& dropThis[dropThis.length - 1].has(e.target).length === 0
+					&& !thisBtn[thisBtn.length - 1].is(e.target)
+					&& thisBtn[thisBtn.length - 1].has(e.target).length === 0) {
+					thisBtn[thisBtn.length - 1].removeClass('is-active');
+					dropThis[dropThis.length - 1].removeClass('open');
+					thisBtn.pop();
+					dropThis.pop();
+				}
 			}
 		});
 	}
-	DropBlock($('.js-drop'), $('.js-drop-btn'));
-	DropBlock($('.js-drop-mob'), $('.js-drop-btn-mob'));
-	DropBlock($('.js-drop-catalog'), $('.js-drop-btn-catalog'));
+	DropBlock($('.js-drop-btn'));
+	DropBlock($('.js-drop-btn-mob'));
+
 
 	// // JQuery Slider // Ползунок
 	// function JQuerySlider() {
@@ -831,5 +851,40 @@ $(document).ready(function () {
 		})
 	}
 	catalogView();
+
+	// Добавление/убавление количества товара в корзину c Inputmask
+	function spinner() {
+		if ($('.card__addcart-count').length) {
+			$('.card__addcart-count').each(function () {
+				var spinner = $(this),
+					input = spinner.find('.card__count-input'),
+					plus = spinner.find('.card__count-btn--plus'),
+					minus = spinner.find('.card__count-btn--minus'),
+					val = 1;
+				input.inputmask({
+					mask: '9{1,3} шт',
+					placeholder: '1'
+				});
+				input.on('change', function () {
+					val = input.inputmask('unmaskedvalue');
+				})
+				plus.on('click', function () {
+					if (val < 999) {
+						val++;
+						input.inputmask('setvalue', val);
+						console.log(input.inputmask('unmaskedvalue'));
+					}
+				});
+				minus.on('click', function () {
+					if (val > 1) {
+						val--;
+						input.inputmask('setvalue', val);
+						console.log(input.inputmask('unmaskedvalue'));
+					}
+				});
+			});
+		}
+	}
+	spinner()
 
 });

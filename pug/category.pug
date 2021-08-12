@@ -30,15 +30,19 @@ block content
 						aside.category__sidebar 
 							// filters
 							form(action="#").filters
-								.filters__bntmob.js-drop-btn(data-drop="filters") Фильтры товаров
-								.filters__nav.js-drop#filters
+								.filters__bntmob.js-drop-btn(data-drop="filters") 
+									.filters__icon
+										img(src="img/funnel.svg", alt="")
+									span Фильтры товаров
+								.filters__nav#filters
+									.filters__close.js-drop-close(data-drop="filters")
 									.filters__title Фильтры товаров
 									.filters__select 
 										.filters__trigger.js-drop-btn(data-drop="filtersNav") Ручки
 											<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M14 1L7.5 8L1 0.999999"/>
 											</svg>
-										.filters__drop.js-drop#filtersNav
+										.filters__drop#filtersNav
 											ul.filters__list
 												li.filters__item
 													a(href="#") Название товара 
@@ -125,7 +129,7 @@ block js-libs
 	//- script(src="js/libs/jquery.fancybox.min.js")
 	//- script(src="js/libs/slick.min.js")
 	//- script(src="js/libs/jquery.matchHeight-min.js")
-	//- script(src="js/libs/jquery.inputmask.min.js")
+	script(src="js/libs/jquery.inputmask.min.js")
 	//- script(src="js/libs/autosize.min.js")
 	//- script(src="js/libs/tooltipster.bundle.min.js")
 	//- script(src="js/libs/jquery.mmenu.min.all.js")
