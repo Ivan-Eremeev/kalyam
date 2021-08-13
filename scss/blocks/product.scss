@@ -66,8 +66,85 @@
     color: $green;
     margin-bottom: 20px;
   }
+  &__item {
+    display: flex;
+  }
+  &__property {
+    width: 50%;
+    padding-right: 10px;
+    position: relative;
+    &:after {
+      width: 100%;
+      content: '...................................................................................';
+      display: inline;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+    }
+    span {
+      background-color: #fff;
+      position: relative;
+      z-index: 2;
+    }
+  }
+  &__value {
+    display: flex;
+    align-items: flex-end;
+    width: 50%;
+    background-color: #fff;
+  }
   .btn {
     padding: 15px 50px 14px;
+  }
+  &__appendrow  {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-left: -30px;
+  }
+  &__appenditem {
+    margin-bottom: 22px;
+    margin-left: 30px;
+    input {
+      display: none;
+      &:checked {
+        + label {
+          .product__appendicon {
+            img {
+              animation: favorite .3s;
+            }
+          }
+        }
+      }
+    }
+    label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+      cursor: pointer;
+      transition: 0.2s;
+       &:hover {
+        color: $green;
+      }
+    }
+  }
+  &__appendicon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    margin-right: 18px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    img {
+      display: block;
+    }
   }
   @media (max-width: $break_md) {
     &__slider {
@@ -91,6 +168,9 @@
     .btn {
       width: 100%;
       text-align: center;
+    }
+    &__appenditem {
+      width: 100%;
     }
   }
   @media (max-width: $break_xs) {
@@ -122,6 +202,20 @@
       }
       .slick-slide {
         margin: 0 6px;
+      }
+    }
+    &__appendrow {
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+    &__appenditem {
+      margin-bottom: 14px;
+    }
+    &__appendicon {
+      width: 34px;
+      height: 34px;
+      img {
+        width: 20px;
       }
     }
   }

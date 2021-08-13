@@ -2,10 +2,12 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>Навигация по страницам</title>
+		<title>Страница товара</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
+		<link rel="stylesheet" href="css/libs/jquery.scrollbar.css">
+		<link rel="stylesheet" href="css/libs/slick.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -201,29 +203,74 @@
 				</div>
 			</header>
 			<!-- /header-->
-			<div class="content content--align-center">
+			<main class="content">
 				<div class="wrapper">
-					<h1>Навигация по страницам</h1>
-					<ul> 
-						<li> <a href="home.html">Главная</a></li>
-						<li><a href="registration.html">Регистрация личного кабинета</a></li>
-						<li> <a href="verifytel.html">Подтверждение номера телефона</a></li>
-						<li> <a href="notverify.html">Неверный код</a></li>
-						<li> <a href="enter.html">Вход в личный кабинет</a></li>
-						<li> <a href="password-recovery.html">Восстановление пароля</a></li>
-						<li> <a href="verifyemail.html">Подтверждение входа</a></li>
-						<li> <a href="newpassword.html">Новый пароль</a></li>
-						<li> <a href="404.html">404</a></li>
-						<li><a href="changing.html">Изменение персональных данных</a></li>
-						<li> <a href="lk.html">Личный аккаунт</a></li>
-						<li> <a href="history-product.html">История заказа</a></li>
-						<li> <a href="category.html">Категория</a></li>
-						<li> <a href="cart.html">Корзина</a></li>
-						<li><a href="favorite.html">Избранное</a></li>
-						<li> <a href="product-page.html">Страница товара</a></li>
-					</ul>
+					<!-- product-->
+					<div class="product">
+						<div class="product__row">
+							<div class="product__slider"> 
+								<div id="product-slider">
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+								</div>
+								<div id="product-slider-nav">
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+									<div class="img-responsive"><img src="img/product_1.jpg" alt=""></div>
+								</div>
+							</div>
+							<div class="product__content">
+								<div class="product__title">Настольная карточная игра UNO Уно</div>
+								<div class="product__price">169 руб</div>
+								<ul class="product__list"> 
+									<li>Артикул: 1230</li>
+								</ul>
+								<ul class="product__list"> 
+									<li class="product__item">
+										<div class="product__property"> <span>Характеристика</span></div>
+										<div class="product__value">значение</div>
+									</li>
+									<li class="product__item">
+										<div class="product__property"><span>Характеристика</span></div>
+										<div class="product__value">значение</div>
+									</li>
+									<li class="product__item">
+										<div class="product__property"><span>Характеристика</span></div>
+										<div class="product__value">значение</div>
+									</li>
+									<li class="product__item">
+										<div class="product__property"><span>Характеристика</span></div>
+										<div class="product__value">значение</div>
+									</li>
+									<li class="product__item">
+										<div class="product__property"><span>Характеристика</span></div>
+										<div class="product__value">значение</div>
+									</li>
+									<li class="product__item">
+										<div class="product__property"><span>Характеристика</span></div>
+										<div class="product__value">значение</div>
+									</li>
+								</ul>
+								<div class="product__appendrow"> 
+									<div class="product__appenditem">
+										<input id="favorite" type="checkbox">
+										<label for="favorite"><span class="product__appendicon"><img src="img/favorite.svg" alt=""></span><span>Добавить в избранное</span></label>
+									</div>
+									<div class="product__appenditem">
+										<input id="cart" type="checkbox">
+										<label for="cart"><span class="product__appendicon"><img src="img/cart_2.svg" alt=""></span><span>Добавить в корзину</span></label>
+									</div>
+								</div>
+								<div class="btn">Оформить заказ  </div>
+							</div>
+						</div>
+					</div>
+					<!--	/product-->
 				</div>
-			</div>
+			</main>
 			<!-- footer-->
 			<footer class="footer"> 
 				<div class="wrapper"> 
@@ -277,6 +324,8 @@
 			<!-- /footer-->
 		</div>
 		<script src="js/libs/jquery.min.js"></script>
+		<script src="js/libs/slick.min.js"></script>
+		<script src="js/libs/jquery.scrollbar.min.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>

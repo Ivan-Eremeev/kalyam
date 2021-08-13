@@ -1,0 +1,113 @@
+extends blocks/base.pug
+
+block title 
+	title Страница товара
+
+block style-libs
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	link(rel="stylesheet", href="css/libs/slick.css")
+	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/aos.css")
+
+block content
+	include blocks/card-recom.pug
+
+	.page
+
+		include blocks/header.pug
+		
+		main.content
+			.wrapper
+
+				// product
+				.product
+					.product__row
+						.product__slider 
+							#product-slider
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+							#product-slider-nav
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+								.img-responsive
+									img(src="img/product_1.jpg", alt="")
+						.product__content
+							.product__title Настольная карточная игра UNO Уно
+							.product__price 169 руб
+							ul.product__list 
+								li Артикул: 1230
+							ul.product__list 
+								li.product__item
+									.product__property 
+										span Характеристика
+									.product__value значение
+								li.product__item
+									.product__property
+										span Характеристика
+									.product__value значение
+								li.product__item
+									.product__property
+										span Характеристика
+									.product__value значение
+								li.product__item
+									.product__property
+										span Характеристика
+									.product__value значение
+								li.product__item
+									.product__property
+										span Характеристика
+									.product__value значение
+								li.product__item
+									.product__property
+										span Характеристика
+									.product__value значение
+							.product__appendrow 
+								.product__appenditem
+									input#favorite(type="checkbox")
+									label(for="favorite")
+										span.product__appendicon
+											img(src="img/favorite.svg", alt="")
+										span Добавить в избранное
+								.product__appenditem
+									input#cart(type="checkbox")
+									label(for="cart")
+										span.product__appendicon
+											img(src="img/cart_2.svg", alt="")
+										span Добавить в корзину
+							.btn Оформить заказ  
+				//	/product
+			
+		include blocks/footer.pug
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	script(src="js/libs/jquery.scrollbar.min.js")
+	//- script(src="js/libs/aos.js")
+	//- script(src="js/libs/circle-progress.min.js")
+	//- script(src="js/libs/bootstrap.bundle.min.js") 
+	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")
