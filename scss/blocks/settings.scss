@@ -115,6 +115,7 @@ body {
   user-select: none;
   cursor: pointer;
   transition: $trans;
+  text-align: center;
   &--mini {
     padding: 7px 20px 8px;
     box-shadow: none;

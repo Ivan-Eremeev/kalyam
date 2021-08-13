@@ -1,7 +1,7 @@
 extends blocks/base.pug
 
 block title 
-	title Навигация по страницам
+	title Избранное
 
 block style-libs
 	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
@@ -15,46 +15,28 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/aos.css")
 
 block content
+	include blocks/card-favorite.pug
 
 	.page
 
 		include blocks/header.pug
 		
-		.content.content--align-center
+		.content
 			.wrapper
 
-				h1 Навигация по страницам
-				ul 
-					li 
-						a(href="home.html") Главная
-					li
-						a(href="registration.html") Регистрация личного кабинета
-					li 
-						a(href="verifytel.html") Подтверждение номера телефона
-					li 
-						a(href="notverify.html") Неверный код
-					li 
-						a(href="enter.html") Вход в личный кабинет
-					li 
-						a(href="password-recovery.html") Восстановление пароля
-					li 
-						a(href="verifyemail.html") Подтверждение входа
-					li 
-						a(href="newpassword.html") Новый пароль
-					li 
-						a(href="404.html") 404
-					li
-						a(href="changing.html") Изменение персональных данных
-					li 
-						a(href="lk.html") Личный аккаунт
-					li 
-						a(href="history-product.html") История заказа
-					li 
-						a(href="category.html") Категория
-					li 
-						a(href="cart.html") Корзина
-					li
-						a(href="favorite.html") Избранное
+				// favorite
+				.favorite
+					.favorite__title Избранное
+					.row 
+						.favorite__col
+							+cardFavorite('1')
+						.favorite__col
+							+cardFavorite('2')
+						.favorite__col
+							+cardFavorite('3')
+						.favorite__col
+							+cardFavorite('4')
+				//	/favorite
 			
 		include blocks/footer.pug
 
@@ -63,7 +45,7 @@ block js-libs
 	//- script(src="js/libs/jquery.fancybox.min.js")
 	//- script(src="js/libs/slick.min.js")
 	//- script(src="js/libs/jquery.matchHeight-min.js")
-	//- script(src="js/libs/jquery.inputmask.min.js")
+	script(src="js/libs/jquery.inputmask.min.js")
 	//- script(src="js/libs/autosize.min.js")
 	//- script(src="js/libs/tooltipster.bundle.min.js")
 	//- script(src="js/libs/jquery.mmenu.min.all.js")

@@ -1,7 +1,7 @@
 extends blocks/base.pug
 
 block title 
-	title Навигация по страницам
+	title Корзина
 
 block style-libs
 	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
@@ -15,46 +15,48 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/aos.css")
 
 block content
+	include blocks/card-in-cart.pug
 
 	.page
 
 		include blocks/header.pug
 		
-		.content.content--align-center
+		.content
 			.wrapper
 
-				h1 Навигация по страницам
-				ul 
-					li 
-						a(href="home.html") Главная
-					li
-						a(href="registration.html") Регистрация личного кабинета
-					li 
-						a(href="verifytel.html") Подтверждение номера телефона
-					li 
-						a(href="notverify.html") Неверный код
-					li 
-						a(href="enter.html") Вход в личный кабинет
-					li 
-						a(href="password-recovery.html") Восстановление пароля
-					li 
-						a(href="verifyemail.html") Подтверждение входа
-					li 
-						a(href="newpassword.html") Новый пароль
-					li 
-						a(href="404.html") 404
-					li
-						a(href="changing.html") Изменение персональных данных
-					li 
-						a(href="lk.html") Личный аккаунт
-					li 
-						a(href="history-product.html") История заказа
-					li 
-						a(href="category.html") Категория
-					li 
-						a(href="cart.html") Корзина
-					li
-						a(href="favorite.html") Избранное
+				// category
+				.category
+					.category__row 
+						aside.category__sidebar 
+							// cart
+							.cart
+								.cart__btndrop.js-drop-btn(data-drop="cart")
+									.cart__icon
+										img(src="img/percent_2.svg", alt="")
+									span Ввести промокод
+								.cart__drop#cart
+									.cart__title Корзина
+									.cart__text Введите промокод для получения скидки при оплате:
+									.cart__input 
+										input(type="text" placeholder="Введите промокод ")
+									a(href="#").btn Оформить заказ
+							//	/cart
+						main.category__main
+							.row
+								.category__col
+									+cardInCart('1')
+								.category__col
+									+cardInCart('2')
+								.category__col
+									+cardInCart('3')
+								.category__col
+									+cardInCart('4')
+								.category__col
+									+cardInCart('5')
+								.category__col
+									+cardInCart('6')
+				
+				//	/category
 			
 		include blocks/footer.pug
 
@@ -63,7 +65,7 @@ block js-libs
 	//- script(src="js/libs/jquery.fancybox.min.js")
 	//- script(src="js/libs/slick.min.js")
 	//- script(src="js/libs/jquery.matchHeight-min.js")
-	//- script(src="js/libs/jquery.inputmask.min.js")
+	script(src="js/libs/jquery.inputmask.min.js")
 	//- script(src="js/libs/autosize.min.js")
 	//- script(src="js/libs/tooltipster.bundle.min.js")
 	//- script(src="js/libs/jquery.mmenu.min.all.js")
