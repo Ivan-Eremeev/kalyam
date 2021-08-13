@@ -3505,3 +3505,42 @@ body.lock {
     margin-bottom: 7px;
   }
 }
+
+.policy {
+  padding: 80px 0 25px;
+}
+.policy__block {
+  font-size: 18px;
+}
+.policy__block:not(:last-child) {
+  margin-bottom: 20px;
+}
+.policy h1 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 25px;
+}
+.policy h2 {
+  font-weight: 600;
+  color: #000;
+}
+@media (max-width: 769px) {
+  .policy {
+    padding: 50px 0 0;
+  }
+  .policy h1 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 500px) {
+  .policy {
+    padding: 40px 0;
+  }
+  .policy h1 {
+    font-size: 20px;
+  }
+  .policy__block {
+    font-size: 16px;
+  }
+}
