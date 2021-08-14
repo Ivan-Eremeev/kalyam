@@ -24,6 +24,16 @@ body {
     position: fixed;
   }
 }
+.tablet-hide {
+  @media (max-width: $break_md) {
+    display: none !important;
+  }
+}
+.tablet-visible {
+  @media (min-width: $break_md + 1) {
+    display: none !important;
+  }
+}
 .mobile-hide {
   @media (max-width: $break_sm) {
     display: none !important;
@@ -34,13 +44,13 @@ body {
     display: none !important;
   }
 }
-.tablet-hide {
-  @media (max-width: $break_md) {
+.mobilesmall-hide {
+  @media (max-width: $break_xs) {
     display: none !important;
   }
 }
-.tablet-visible {
-  @media (min-width: $break_md + 1) {
+.mobilesmall-visible {
+  @media (min-width: $break_xs + 1) {
     display: none !important;
   }
 }
@@ -97,6 +107,10 @@ body {
     display: flex;
     align-items: center;
   }
+  &--bg {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+  }
   @media (max-width: $break_xs) {
     padding-bottom: 0;
   }
@@ -123,6 +137,13 @@ body {
   }
   &:hover {
     background-color: $greenL;
+  }
+  &:disabled {
+    background-color: #D4D4D4;
+    cursor: default;
+    &:hover {
+      background-color: #D4D4D4;
+    }
   }
   @media (max-width: $break_xs) {
     font-size: 22px;

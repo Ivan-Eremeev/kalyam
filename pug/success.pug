@@ -1,7 +1,7 @@
 extends blocks/base.pug
 
 block title 
-	title Навигация по страницам
+	title Сообщение об успешной покупке
 
 block style-libs
 	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
@@ -15,6 +15,7 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/aos.css")
 
 block content
+	include blocks/card-recom.pug
 
 	.page
 
@@ -23,48 +24,18 @@ block content
 		.content.content--align-center
 			.wrapper
 
-				h1 Навигация по страницам
-				ul 
-					li 
-						a(href="home.html") Главная
-					li
-						a(href="registration.html") Регистрация личного кабинета
-					li 
-						a(href="verifytel.html") Подтверждение номера телефона
-					li 
-						a(href="notverify.html") Неверный код
-					li 
-						a(href="enter.html") Вход в личный кабинет
-					li 
-						a(href="password-recovery.html") Восстановление пароля
-					li 
-						a(href="verifyemail.html") Подтверждение входа
-					li 
-						a(href="newpassword.html") Новый пароль
-					li 
-						a(href="404.html") 404
-					li
-						a(href="changing.html") Изменение персональных данных
-					li 
-						a(href="lk.html") Личный аккаунт
-					li 
-						a(href="history-product.html") История заказа
-					li 
-						a(href="category.html") Категория
-					li 
-						a(href="cart.html") Корзина
-					li
-						a(href="favorite.html") Избранное
-					li 
-						a(href="product-page.html") Страница товара
-					li 
-						a(href="policy.html") Политика безопасности
-					li 
-						a(href="support.html") Сервис и поддержка
-					li 
-						a(href="success.html") Сообщение об успешной покупке
-					li 
-						a(href="payment.html") Оплата через банк
+				// form
+				form(action="#").form
+					.form__text
+						h1 Спасибо за заказ!
+						p В ближайшее время на Ваш номер придет <br>смс-сообщение с информацией  о заказе
+					.form__footer.form__footer--2
+						button(type="submit").btn 
+							span.mobilesmall-hide Перейти в личный кабинет
+							span.mobilesmall-visible Перейти в кабинет
+						p Возникли проблемы? 
+							a(href="#").form__link Связаться с тех.поддержкой
+				//	/form
 			
 		include blocks/footer.pug
 

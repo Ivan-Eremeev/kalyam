@@ -1,6 +1,6 @@
 .form {
   max-width: 530px;
-  padding: 40px 0;
+  padding: 80px 0 25px;
   margin-left: auto;
   margin-right: auto;
   &__text {
@@ -14,6 +14,7 @@
     }
     p {
       margin-bottom: 8px;
+      font-size: 18px;
     }
   }
   &__input {
@@ -42,6 +43,15 @@
     .btn {
       margin-bottom: 18px;
     }
+    &--2 {
+      .btn {
+        padding: 15px 20px 14px;
+      }
+      .form__link {
+        display: inline-block;
+        border-bottom: none;
+      }
+    }
   }
   &__link {
     color: #515151;
@@ -58,11 +68,18 @@
     border-radius: 5px;
   }
   @media (max-width: $break_sm) {
+    padding: 75px 0 15px;
     max-width: 380px;
   }
   @media (max-width: $break_xs) {
-    &__title {
-      font-size: 27px;
+    padding: 40px 0;
+    &__text {
+      h1 {
+        font-size: 27px;
+      }
+      p {
+        font-size: 14px;
+      }
     }
     &__input {
       margin-bottom: 8px;
@@ -72,11 +89,15 @@
       }
     }
     &__footer {
-      font-size: 16px;
+      font-size: 14px;
     }
     &__shadowblock {
       padding: 0 20px;
       box-shadow: none;
+    }
+    .btn {
+      width: 100%;
+      margin-bottom: 22px;
     }
   }
 }
