@@ -1,0 +1,14 @@
+.faq {
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 32px;
+  }
+  @media (max-width: $break_xs) {
+    &__title {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.support {
+  padding: 80px 0 20px;
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__col {
+    @include col(6);
+    @include col-sm(12);
+  }
+  .accordion {
+    max-width: 520px;
+  }
+  .formfaq {
+     max-width: 410px;
+  }
+  @media (max-width: $break_sm) {
+    padding: 75px 0 10px;
+    .accordion {
+      max-width: none;
+      margin-bottom: 50px;
+    }
+    .formfaq {
+      max-width: none;
+    }
+  }
+  @media (max-width: $break_xs) {
+    padding: 40px 0;
+    .accordion {
+      margin-bottom: 56px;
+    }
+  }
+}

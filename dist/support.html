@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>Навигация по страницам</title>
+		<title>Страница товара</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
@@ -201,31 +201,91 @@
 				</div>
 			</header>
 			<!-- /header-->
-			<div class="content content--align-center">
+			<main class="content">
 				<div class="wrapper">
-					<h1>Навигация по страницам</h1>
-					<ul> 
-						<li> <a href="home.html">Главная</a></li>
-						<li><a href="registration.html">Регистрация личного кабинета</a></li>
-						<li> <a href="verifytel.html">Подтверждение номера телефона</a></li>
-						<li> <a href="notverify.html">Неверный код</a></li>
-						<li> <a href="enter.html">Вход в личный кабинет</a></li>
-						<li> <a href="password-recovery.html">Восстановление пароля</a></li>
-						<li> <a href="verifyemail.html">Подтверждение входа</a></li>
-						<li> <a href="newpassword.html">Новый пароль</a></li>
-						<li> <a href="404.html">404</a></li>
-						<li><a href="changing.html">Изменение персональных данных</a></li>
-						<li> <a href="lk.html">Личный аккаунт</a></li>
-						<li> <a href="history-product.html">История заказа</a></li>
-						<li> <a href="category.html">Категория</a></li>
-						<li> <a href="cart.html">Корзина</a></li>
-						<li><a href="favorite.html">Избранное</a></li>
-						<li> <a href="product-page.html">Страница товара</a></li>
-						<li> <a href="policy.html">Политика безопасности</a></li>
-						<li> <a href="support.html">Сервис и поддержка</a></li>
-					</ul>
+					<!-- support-->
+					<div class="support">
+						<div class="row"> 
+							<div class="support__col">
+								<!-- faq-->
+								<div class="faq">
+									<div class="faq__title">Ответы на часто задаваемые вопросы</div>
+									<div class="accordion">
+										<div class="accordion__item">
+											<div class="accordion__trigger" data-trigger="trigger_1">Как сделать заказ
+												<div class="accordion__cross"></div>
+											</div>
+											<div class="accordion__content" id="trigger_1">
+												<p>1 Добавьте в корзину все товары, которые хотите заказать и укажите количество каждого товара</p>
+												<p>2 Перейдите в корзину и нажмите “Оформить заказ”</p>
+												<p>3 Выберите способ оплаты и способ получения заказа, заполните адресные данные для доставки заказа, дополнительные данные и нажмите “Оплатить заказ”</p>
+												<p>4 Оплатите заказ онлайн/при получении</p>
+											</div>
+										</div>
+										<div class="accordion__item">
+											<div class="accordion__trigger" data-trigger="trigger_2">Как совершить оплату
+												<div class="accordion__cross"></div>
+											</div>
+											<div class="accordion__content" id="trigger_2">
+												<p>1 При выборе способа оплаты картой онлайн, введите данные вашей карты и следуйте дальнейшим инструкциям на странице оплаты вашего онлайн-банка</p>
+												<p>2 При выборе оплаты при получении товара,             Вы можете оплатить заказ наличными или банковской картой</p>
+											</div>
+										</div>
+										<div class="accordion__item">
+											<div class="accordion__trigger" data-trigger="trigger_3">Как оформить доставку
+												<div class="accordion__cross"></div>
+											</div>
+											<div class="accordion__content" id="trigger_3">
+												<p>1 Перейдите в корзину и нажмите “Оформить заказ”</p>
+												<p>2 Выберите способ получения заказа и способ оплаты</p>
+												<p>3 Заполните адресные данные для доставки заказа и другие необходимые данные</p>
+												<p>4 Нажмите “Оплатить заказ”</p>
+											</div>
+										</div>
+										<div class="accordion__item">
+											<div class="accordion__trigger" data-trigger="trigger_4">Как войти в личный кабинет
+												<div class="accordion__cross"></div>
+											</div>
+											<div class="accordion__content" id="trigger_4">
+												<p>1 Перейдите на страницу авторизации. Перейти на страницу можно кликнув на “Войти” в меню сайта</p>
+												<p>2 Введите свой номер телефона или почту в качестве логина, а так же пароль и нажмите “Войти”</p>
+												<p>Если вы не помните пароль, то просто нажмите <br>“Я не помню пароль. Восстановить”</p>
+											</div>
+										</div>
+										<div class="accordion__item">
+											<div class="accordion__trigger" data-trigger="trigger_5">Как зарегистрироваться
+												<div class="accordion__cross"></div>
+											</div>
+											<div class="accordion__content" id="trigger_5">
+												<p>1 Перейдите на страницу регистрации</p>
+												<p>2 Введите свой номер телефона, почту и пароль</p>
+												<p>3 Введите код, который пришёл в СМС-сообщении на Ваш номер телефона</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--	/faq-->
+							</div>
+							<div class="support__col">
+								<!-- formfaq -->
+								<form class="formfaq" action="#"> 
+									<div class="formfaq__title">Задайте свой вопрос</div>
+									<div class="formfaq__text">Напишите свой отзыв или пожелание, мы ответим вам в течение 1-2 дней на вашу почту</div>
+									<div class="formfaq__input"> 
+										<input type="text" placeholder="Введите свою почту">
+									</div>
+									<div class="formfaq__textarea"> 
+										<textarea placeholder="Введите сообщение..."></textarea>
+									</div>
+									<div class="btn">Отправить вопрос</div>
+								</form>
+								<!--	/formfaq -->
+							</div>
+						</div>
+					</div>
+					<!--	/support-->
 				</div>
-			</div>
+			</main>
 			<!-- footer-->
 			<footer class="footer"> 
 				<div class="wrapper"> 

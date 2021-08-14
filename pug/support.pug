@@ -1,0 +1,103 @@
+extends blocks/base.pug
+
+block title 
+	title Страница товара
+
+block style-libs
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	//- link(rel="stylesheet", href="css/libs/slick.css")
+	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/aos.css")
+
+block content
+	include blocks/card-recom.pug
+
+	.page
+
+		include blocks/header.pug
+		
+		main.content
+			.wrapper
+
+				// support
+				.support
+					.row 
+						.support__col
+							// faq
+							.faq
+								.faq__title Ответы на часто задаваемые вопросы
+								.accordion
+									.accordion__item
+										.accordion__trigger(data-trigger="trigger_1") Как сделать заказ
+											.accordion__cross
+										#trigger_1.accordion__content
+											p 1 Добавьте в корзину все товары, которые хотите заказать и укажите количество каждого товара
+											p 2 Перейдите в корзину и нажмите “Оформить заказ”
+											p 3 Выберите способ оплаты и способ получения заказа, заполните адресные данные для доставки заказа, дополнительные данные и нажмите “Оплатить заказ”
+											p 4 Оплатите заказ онлайн/при получении
+									.accordion__item
+										.accordion__trigger(data-trigger="trigger_2") Как совершить оплату
+											.accordion__cross
+										#trigger_2.accordion__content
+											p 1 При выборе способа оплаты картой онлайн, введите данные вашей карты и следуйте дальнейшим инструкциям на странице оплаты вашего онлайн-банка
+											p 2 При выборе оплаты при получении товара,             Вы можете оплатить заказ наличными или банковской картой
+									.accordion__item
+										.accordion__trigger(data-trigger="trigger_3") Как оформить доставку
+											.accordion__cross
+										#trigger_3.accordion__content
+											p 1 Перейдите в корзину и нажмите “Оформить заказ”
+											p 2 Выберите способ получения заказа и способ оплаты
+											p 3 Заполните адресные данные для доставки заказа и другие необходимые данные
+											p 4 Нажмите “Оплатить заказ”
+									.accordion__item
+										.accordion__trigger(data-trigger="trigger_4") Как войти в личный кабинет
+											.accordion__cross
+										#trigger_4.accordion__content
+											p 1 Перейдите на страницу авторизации. Перейти на страницу можно кликнув на “Войти” в меню сайта
+											p 2 Введите свой номер телефона или почту в качестве логина, а так же пароль и нажмите “Войти”
+											p Если вы не помните пароль, то просто нажмите <br>“Я не помню пароль. Восстановить”
+									.accordion__item
+										.accordion__trigger(data-trigger="trigger_5") Как зарегистрироваться
+											.accordion__cross
+										#trigger_5.accordion__content
+											p 1 Перейдите на страницу регистрации
+											p 2 Введите свой номер телефона, почту и пароль
+											p 3 Введите код, который пришёл в СМС-сообщении на Ваш номер телефона
+							//	/faq
+						.support__col
+							// formfaq 
+							form(action="#").formfaq 
+								.formfaq__title Задайте свой вопрос
+								.formfaq__text Напишите свой отзыв или пожелание, мы ответим вам в течение 1-2 дней на вашу почту
+								.formfaq__input 
+									input(type="text" placeholder="Введите свою почту")
+								.formfaq__textarea 
+									textarea(placeholder="Введите сообщение...")
+								.btn Отправить вопрос
+							//	/formfaq 
+				//	/support
+			
+		include blocks/footer.pug
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	//- script(src="js/libs/jquery.scrollbar.min.js")
+	//- script(src="js/libs/aos.js")
+	//- script(src="js/libs/circle-progress.min.js")
+	//- script(src="js/libs/bootstrap.bundle.min.js") 
+	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")

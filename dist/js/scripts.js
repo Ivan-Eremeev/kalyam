@@ -270,38 +270,38 @@ $(document).ready(function () {
 	// }
 	// tabs($('.js-tabs'));
 
-	// // Аккордеон
-	// function accordion() {
-	// 	if ($('.accordion').length) {
-	// 		$('.accordion').each(function () {
-	// 			var accordion = $(this),
-	// 				trigger = accordion.find('.accordion__trigger'),
-	// 				time = 300;
-	// 			trigger.on('click', function () {
-	// 				var $thisTrigger = $(this),
-	// 					data = $thisTrigger.data('trigger');
-	// 				if (!$thisTrigger.hasClass('active')) {
-	// 					$thisTrigger.addClass('active');
-	// 					accordion.find('#' + data).stop().slideDown(
-	// 						time,
-	// 						function () {
-	// 							$(this).addClass('open')
-	// 						}
-	// 					);
-	// 				} else {
-	// 					$thisTrigger.removeClass('active');
-	// 					accordion.find('#' + data).stop().slideUp(
-	// 						time,
-	// 						function () {
-	// 							$(this).removeClass('open')
-	// 						}
-	// 					);
-	// 				}
-	// 			})
-	// 		})
-	// 	}
-	// }
-	// accordion();
+	// Аккордеон
+	function accordion() {
+		if ($('.accordion').length) {
+			$('.accordion').each(function () {
+				var accordion = $(this),
+					trigger = accordion.find('.accordion__trigger'),
+					time = 300;
+				trigger.on('click', function () {
+					var $thisTrigger = $(this),
+						data = $thisTrigger.data('trigger');
+					if (!$thisTrigger.hasClass('active')) {
+						$thisTrigger.addClass('active');
+						accordion.find('#' + data).stop().slideDown(
+							time,
+							function () {
+								$(this).addClass('open')
+							}
+						);
+					} else {
+						$thisTrigger.removeClass('active');
+						accordion.find('#' + data).stop().slideUp(
+							time,
+							function () {
+								$(this).removeClass('open')
+							}
+						);
+					}
+				})
+			})
+		}
+	}
+	accordion();
 
 	// // Модальное окно
 	// function modal(modal) {
