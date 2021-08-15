@@ -1,0 +1,252 @@
+.order {
+  padding: 80px 0 25px;
+  .wrapper {
+    max-width: 1240px;
+  }
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #060606;
+    margin-bottom: 40px;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__col1 {
+    width: 53.5%;
+  }
+  &__col2 {
+    width: 46.5%;
+    padding-left: 30px;
+    position: relative;
+  }
+  &__block {
+    padding: 45px;
+    background: #FFFFFF;
+    box-shadow: 0px 12px 53px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+    margin-bottom: 30px;
+    &--sticky {
+      position: sticky;
+      top: 75px;
+    }
+  }
+  &__subtitle {
+    font-size: 25px;
+    font-weight: 600;
+    color: #060606;
+    margin-bottom: 18px;
+  }
+  &__input {
+    max-width: 475px;
+    margin-bottom: 10px;
+    input {
+      width: 100%;
+      height: 48px;
+      padding: 0 25px;
+      font-size: 18px;
+      background: #FFFFFF;
+      border: 0.7px solid #BDBDBD;
+      border-radius: 3px;
+      &::placeholder {
+        color: #828282;
+      }
+    }
+    &--select {
+      max-width: 365px;
+      position: relative;
+      input {
+        padding-right: 50px;
+        cursor: pointer;
+      }
+      &:after {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 9px;
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='9' viewBox='0 0 15 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 1L7.5 8L1 0.999999' stroke='%23828282'/%3E%3C/svg%3E%0A");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 18px;
+        right: 22px;
+      }
+    }
+  }
+  &__select {
+    max-width: 365px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  &__trigger {
+    height: 48px;
+    padding: 11px 50px 11px 25px;
+    font-size: 18px;
+    color: #828282;
+    background: #FFFFFF;
+    border: 0.7px solid #BDBDBD;
+    border-radius: 3px;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    span {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 15px;
+      height: 9px;
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='9' viewBox='0 0 15 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 1L7.5 8L1 0.999999' stroke='%23828282'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 18px;
+      right: 22px;
+    }
+  }
+  &__drop {
+    width: 100%;
+    padding-top: 10px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0,50px);
+    transition: 0.5s;
+    z-index: 2;
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0,0);
+    }
+  }
+  &__list {
+    background-color: #fff;
+    border: 0.7px solid #bdbdbd;
+    border-radius: 3px;
+    font-size: 18px;
+    color: #828282;
+    li {
+      padding: 11px 50px 11px 25px;
+      user-select: none;
+      cursor: pointer;
+      &:not(:last-child) {
+        border-bottom: 1px solid #bdbdbd;
+      }
+    }
+  }
+  &__textarea  {
+    max-width: 475px;
+    textarea {
+      width: 100%;
+      height: 160px;
+      padding: 13px 25px;
+      background: #FFFFFF;
+      border: 0.7px solid #BDBDBD;
+      border-radius: 3px;
+      resize: none;
+      font-size: 18px;
+      &::placeholder {
+        color: #828282;
+      }
+    }
+  }
+  &__text {
+    font-size: 20px;
+    color: #828282;
+    p {
+      margin-bottom: 6px;
+    }
+  }
+  &__result {
+    font-size: 22px;
+    font-weight: 600;
+    color: $green;
+    margin-bottom: 17px;
+  }
+  @media (max-width: $break_md) {
+    padding: 75px 0 20px;
+    &__col1 {
+      width: 100%;
+    }
+    &__col2 {
+      width: 100%;
+      padding-left: 0;
+    }
+    &__title {
+      margin-bottom: 32px;
+    }
+    &__block {
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: $break_xs) {
+    padding: 40px 0;
+    &__title {
+      font-size: 22px;
+      margin-bottom: 25px;
+    }
+    &__block {
+      padding: 32px 18px;
+      &--sticky {
+        padding: 32px 18px 60px;
+        .btn {
+          width: 100%;
+          border-radius: 0 0 5px 5px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+    &__subtitle {
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+    &__input {
+      margin-bottom: 8px;
+      input {
+        height: 45px;
+        padding: 0 20px;
+        font-size: 14px;
+      }
+    }
+    &__select {
+      margin-bottom: 8px;
+    }
+    &__trigger {
+      height: 45px;
+      padding: 12px 40px 11px 20px;
+      font-size: 14px;
+    }
+    &__textarea {
+      textarea {
+        font-size: 14px;
+        padding: 12px 20px;
+      }
+    }
+    &__text {
+      font-size: 14px;
+      margin-bottom: 22px;
+      p {
+        margin-bottom: 4px;
+      }
+    }
+    &__result {
+      font-size: 18px;
+      margin-bottom: 34px;
+    }
+    &__drop {
+      padding-top: 8px;
+    }
+    &__list {
+      li {
+        padding: 14px 20px;
+        font-size: 14px;
+      }
+    }
+  }
+}

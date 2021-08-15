@@ -1,0 +1,120 @@
+extends blocks/base.pug
+
+block title 
+	title Оформление заказа
+
+block style-libs
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	//- link(rel="stylesheet", href="css/libs/slick.css")
+	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/aos.css")
+
+block content
+	include blocks/card-recom.pug
+
+	.page
+
+		include blocks/header.pug
+		
+		.content
+
+			// order
+			.order
+				.wrapper
+					h1.order__title Оформление заказа
+					.order__row 
+						.order__col1
+
+							form(action="#").order__block 
+								h2.order__subtitle Личные данные получателя заказа
+								.order__input 
+									input(type="text" placeholder="ФИО")
+								.order__input
+									input(type="text" placeholder="Номер телефона")
+
+							form(action="#").order__block 
+								h2.order__subtitle Выберите способ получения товара
+								.order__select 
+									.order__trigger.js-drop-btn(data-drop="select1")
+										span Самовывоз
+									.order__drop#select1
+										ul.order__list 
+											li.order__item Самовывоз
+											li.filters__item Отправка курьером
+											li.filters__item Доставка до ТК
+											li.filters__item Доставка от магазина
+
+							form(action="#").order__block 
+								h2.order__subtitle Выберите дату и время самовывоза
+								.order__input.order__input--select
+									input(type="text" placeholder="Выбрать день")
+								.order__select 
+									.order__trigger.js-drop-btn(data-drop="select2")
+										span Выбрать время
+									.order__drop#select2
+										ul.order__list 
+											li.order__item 8.00-10.00
+											li.filters__item 10.00-12.00
+											li.filters__item 13.00-15.00
+											li.filters__item 15.00-18.00
+											li.filters__item 18.00-20.00
+
+							form(action="#").order__block 
+								h2.order__subtitle Выберите способ оплаты
+								.order__select 
+									.order__trigger.js-drop-btn(data-drop="select3")
+										span Наличными при получении
+									.order__drop#select3
+										ul.order__list 
+											li.order__item Наличными при получении
+											li.filters__item Картой онлайн
+											li.filters__item Оплата по расчётному счёту
+											li.filters__item Переводом на карту
+
+							form(action="#").order__block 
+								h2.order__subtitle Комментарии к заказу
+								.order__textarea 
+									textarea(placeholder="Ваш комментарий")
+
+						.order__col2
+
+							form.order__block.order__block--sticky
+								h2.order__subtitle Информация о заказе:
+								.order__text 
+									p Телефон: +7 900 323 90 10
+									p Получатель: Григорьев Александр Павлович   
+									p Способ получения: самовывоз
+									p Дата доставки: 12 июля 2021
+									p Время доставки: 10.00-12.00
+									p Способ оплаты: наличными при получении
+									p Стоимость: 1000р
+									p Скидка: 0%
+									p Стоимость доставки: 200р
+								.order__result Итого: 1200 рублей
+								button(type="submit").btn Оплатить заказ
+			//	/order
+			
+		include blocks/footer.pug
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	//- script(src="js/libs/jquery.scrollbar.min.js")
+	//- script(src="js/libs/aos.js")
+	//- script(src="js/libs/circle-progress.min.js")
+	//- script(src="js/libs/bootstrap.bundle.min.js") 
+	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")

@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>Навигация по страницам</title>
+		<title>Оформление заказа</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
@@ -201,33 +201,97 @@
 				</div>
 			</header>
 			<!-- /header-->
-			<div class="content content--align-center">
-				<div class="wrapper">
-					<h1>Навигация по страницам</h1>
-					<ul> 
-						<li> <a href="home.html">Главная</a></li>
-						<li><a href="registration.html">Регистрация личного кабинета</a></li>
-						<li> <a href="verifytel.html">Подтверждение номера телефона</a></li>
-						<li> <a href="notverify.html">Неверный код</a></li>
-						<li> <a href="enter.html">Вход в личный кабинет</a></li>
-						<li> <a href="password-recovery.html">Восстановление пароля</a></li>
-						<li> <a href="verifyemail.html">Подтверждение входа</a></li>
-						<li> <a href="newpassword.html">Новый пароль</a></li>
-						<li> <a href="404.html">404</a></li>
-						<li><a href="changing.html">Изменение персональных данных</a></li>
-						<li> <a href="lk.html">Личный аккаунт</a></li>
-						<li> <a href="history-product.html">История заказа</a></li>
-						<li> <a href="category.html">Категория</a></li>
-						<li> <a href="cart.html">Корзина</a></li>
-						<li><a href="favorite.html">Избранное</a></li>
-						<li> <a href="product-page.html">Страница товара</a></li>
-						<li> <a href="policy.html">Политика безопасности</a></li>
-						<li> <a href="support.html">Сервис и поддержка</a></li>
-						<li> <a href="success.html">Сообщение об успешной покупке</a></li>
-						<li> <a href="payment.html">Оплата через банк</a></li>
-						<li> <a href="order.html">Оформление заказа</a></li>
-					</ul>
+			<div class="content">
+				<!-- order-->
+				<div class="order">
+					<div class="wrapper">
+						<h1 class="order__title">Оформление заказа</h1>
+						<div class="order__row"> 
+							<div class="order__col1">
+								<form class="order__block" action="#"> 
+									<h2 class="order__subtitle">Личные данные получателя заказа</h2>
+									<div class="order__input"> 
+										<input type="text" placeholder="ФИО">
+									</div>
+									<div class="order__input">
+										<input type="text" placeholder="Номер телефона">
+									</div>
+								</form>
+								<form class="order__block" action="#"> 
+									<h2 class="order__subtitle">Выберите способ получения товара</h2>
+									<div class="order__select"> 
+										<div class="order__trigger js-drop-btn" data-drop="select1"><span>Самовывоз</span></div>
+										<div class="order__drop" id="select1">
+											<ul class="order__list"> 
+												<li class="order__item">Самовывоз</li>
+												<li class="filters__item">Отправка курьером</li>
+												<li class="filters__item">Доставка до ТК</li>
+												<li class="filters__item">Доставка от магазина</li>
+											</ul>
+										</div>
+									</div>
+								</form>
+								<form class="order__block" action="#"> 
+									<h2 class="order__subtitle">Выберите дату и время самовывоза</h2>
+									<div class="order__input order__input--select">
+										<input type="text" placeholder="Выбрать день">
+									</div>
+									<div class="order__select"> 
+										<div class="order__trigger js-drop-btn" data-drop="select2"><span>Выбрать время</span></div>
+										<div class="order__drop" id="select2">
+											<ul class="order__list"> 
+												<li class="order__item">8.00-10.00</li>
+												<li class="filters__item">10.00-12.00</li>
+												<li class="filters__item">13.00-15.00</li>
+												<li class="filters__item">15.00-18.00</li>
+												<li class="filters__item">18.00-20.00</li>
+											</ul>
+										</div>
+									</div>
+								</form>
+								<form class="order__block" action="#"> 
+									<h2 class="order__subtitle">Выберите способ оплаты</h2>
+									<div class="order__select"> 
+										<div class="order__trigger js-drop-btn" data-drop="select3"><span>Наличными при получении</span></div>
+										<div class="order__drop" id="select3">
+											<ul class="order__list"> 
+												<li class="order__item">Наличными при получении</li>
+												<li class="filters__item">Картой онлайн</li>
+												<li class="filters__item">Оплата по расчётному счёту</li>
+												<li class="filters__item">Переводом на карту</li>
+											</ul>
+										</div>
+									</div>
+								</form>
+								<form class="order__block" action="#"> 
+									<h2 class="order__subtitle">Комментарии к заказу</h2>
+									<div class="order__textarea"> 
+										<textarea placeholder="Ваш комментарий"></textarea>
+									</div>
+								</form>
+							</div>
+							<div class="order__col2">
+								<form class="order__block order__block--sticky">
+									<h2 class="order__subtitle">Информация о заказе:</h2>
+									<div class="order__text"> 
+										<p>Телефон: +7 900 323 90 10</p>
+										<p>Получатель: Григорьев Александр Павлович   </p>
+										<p>Способ получения: самовывоз</p>
+										<p>Дата доставки: 12 июля 2021</p>
+										<p>Время доставки: 10.00-12.00</p>
+										<p>Способ оплаты: наличными при получении</p>
+										<p>Стоимость: 1000р</p>
+										<p>Скидка: 0%</p>
+										<p>Стоимость доставки: 200р</p>
+									</div>
+									<div class="order__result">Итого: 1200 рублей</div>
+									<button class="btn" type="submit">Оплатить заказ</button>
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
+				<!--	/order-->
 			</div>
 			<!-- footer-->
 			<footer class="footer"> 

@@ -800,6 +800,15 @@ $(document).ready(function () {
 	if ($('.mask-verify').length) {
 		$('.mask-verify').inputmask('999-999');
 	}
+	if ($('.mask-cardnum').length) {
+		$('.mask-cardnum').inputmask('9999 9999 9999 9999');
+	}
+	if ($('.mask-date').length) {
+		$('.mask-date').inputmask('99/99');
+	}
+	if ($('.mask-cvc').length) {
+		$('.mask-cvc').inputmask('999');
+	}
 
 	// JQueryScrollbar
 	if ($('.scrollbar-inner').length) {

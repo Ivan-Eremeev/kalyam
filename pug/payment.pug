@@ -37,11 +37,11 @@ block content
 							img(src="img/mastercard.svg", alt="")
 							img(src="img/maestro.svg", alt="")
 						.payment__input 
-							input(type="text" placeholder="Номер карты")
+							input(type="text" placeholder="Номер карты").mask-cardnum
 						.payment__input 
-							input(type="text" placeholder="ММ/ГГ")
+							input(type="text" placeholder="ММ/ГГ").mask-date
 						.payment__input 
-							input(type="text" placeholder="CVV/CVC")
+							input(type="text" placeholder="CVV/CVC").mask-cvc
 						button(type="submit" disabled).btn Оплатить заказ
 				//	/payment
 			
