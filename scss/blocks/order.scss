@@ -209,6 +209,11 @@
       margin-bottom: 20px;
     }
   }
+  @media (max-width: $break_sm) {
+    .wrapper {
+      max-width: 610px;
+    }
+  }
   @media (max-width: $break_xs) {
     padding: 40px 0;
     &__title {

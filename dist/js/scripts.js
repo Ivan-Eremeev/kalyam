@@ -333,4 +333,27 @@ $(document).ready(function () {
 	select($('.js-select'));
 	select($('.js-select-nohide'), false);
 
+	// Меню каталога на мобилке
+	function menuCatalogMob() {
+		var btn = $('#btnCatalog'),
+				menu = $('#menu-catalog'),
+				btnSubmenu = $('.menu-catalog__next'),
+				submenu = $('.menu-catalog__sublist'),
+				close = $('.menu-catalog__close');
+		btn.on('click', function () {
+			menu.addClass('open');
+		})
+		btnSubmenu.on('click', function () {
+			$(this).siblings('.menu-catalog__sublist').addClass('open');
+		})
+		close.on('click', function () {
+			if (submenu.hasClass('open')) {
+				submenu.removeClass('open');
+			}else {
+				menu.removeClass('open');
+			}
+		})
+	}
+	menuCatalogMob();
+
 });

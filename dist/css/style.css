@@ -251,7 +251,7 @@ body.lock {
 }
 @media (max-width: 769px) {
   .wrapper {
-    max-width: 620px;
+    max-width: 610px;
   }
 }
 
@@ -4337,6 +4337,11 @@ body.lock {
   }
   .order__block {
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 769px) {
+  .order .wrapper {
+    max-width: 610px;
   }
 }
 @media (max-width: 500px) {

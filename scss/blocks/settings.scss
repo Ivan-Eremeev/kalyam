@@ -84,7 +84,7 @@ body {
 .wrapper {
   @include wrapper();
   @media (max-width: $break_sm) {
-    max-width: 620px;
+    max-width: 610px;
   }
 }
 *:-webkit-autofill {
