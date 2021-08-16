@@ -423,6 +423,50 @@ body.lock {
   z-index: 2;
 }
 
+.datepicker {
+  width: 322px;
+}
+
+.datepicker--pointer {
+  display: none;
+}
+
+.datepicker--content {
+  position: relative;
+  padding: 28px 18px 70px;
+  font-size: 18px;
+}
+.datepicker--content .btn {
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.datepicker--nav {
+  padding: 18px;
+}
+
+.datepicker--nav-title {
+  font-size: 22px;
+  color: #262626;
+}
+
+.datepicker--day-name {
+  color: #0ACA43;
+}
+
+.datepicker--cell {
+  color: #828282;
+}
+.datepicker--cell.-other-month- {
+  opacity: 0;
+}
+.datepicker--cell.-current- {
+  color: #0ACA43;
+}
+
 @-webkit-keyframes favorite {
   0% {
     -webkit-transform: scale(1);
@@ -729,6 +773,9 @@ body.lock {
     bottom: 0;
     left: 100%;
     visibility: visible;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
     opacity: 1;
     z-index: 14;
   }
@@ -4045,7 +4092,7 @@ body.lock {
 .order__block--sticky {
   position: -webkit-sticky;
   position: sticky;
-  top: 75px;
+  top: 95px;
 }
 .order__subtitle {
   font-size: 25px;
@@ -4065,6 +4112,7 @@ body.lock {
   background: #FFFFFF;
   border: 0.7px solid #BDBDBD;
   border-radius: 3px;
+  color: #828282;
 }
 .order__input input::-webkit-input-placeholder {
   color: #828282;
@@ -4089,6 +4137,42 @@ body.lock {
   padding-right: 50px;
   cursor: pointer;
 }
+.order__input--select input::-webkit-input-placeholder {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.order__input--select input::-moz-placeholder {
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+.order__input--select input:-ms-input-placeholder {
+  -ms-transition: 0.2s;
+  transition: 0.2s;
+}
+.order__input--select input::-ms-input-placeholder {
+  -ms-transition: 0.2s;
+  transition: 0.2s;
+}
+.order__input--select input::placeholder {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.order__input--select input:hover::-webkit-input-placeholder {
+  color: #0ACA43;
+}
+.order__input--select input:hover::-moz-placeholder {
+  color: #0ACA43;
+}
+.order__input--select input:hover:-ms-input-placeholder {
+  color: #0ACA43;
+}
+.order__input--select input:hover::-ms-input-placeholder {
+  color: #0ACA43;
+}
+.order__input--select input:hover::placeholder {
+  color: #0ACA43;
+}
 .order__input--select:after {
   content: "";
   display: block;
@@ -4098,7 +4182,7 @@ body.lock {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: 18px;
+  top: 19px;
   right: 22px;
 }
 .order__select {
@@ -4120,6 +4204,9 @@ body.lock {
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .order__trigger span {
   display: block;
@@ -4137,6 +4224,9 @@ body.lock {
   position: absolute;
   top: 18px;
   right: 22px;
+}
+.order__trigger:hover {
+  color: #0ACA43;
 }
 .order__drop {
   width: 100%;
@@ -4166,16 +4256,29 @@ body.lock {
   font-size: 18px;
   color: #828282;
 }
-.order__list li {
+.order__list li:not(:last-child) {
+  border-bottom: 1px solid #bdbdbd;
+}
+.order__list li input {
+  display: none;
+}
+.order__list li label {
+  display: block;
   padding: 11px 50px 11px 25px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
-.order__list li:not(:last-child) {
-  border-bottom: 1px solid #bdbdbd;
+.order__list li label:hover {
+  color: #0ACA43;
+}
+.order__list li.hide {
+  display: none;
 }
 .order__textarea {
   max-width: 475px;
@@ -4296,7 +4399,9 @@ body.lock {
     padding-top: 8px;
   }
   .order__list li {
-    padding: 14px 20px;
     font-size: 14px;
+  }
+  .order__list li label {
+    padding: 14px 20px;
   }
 }

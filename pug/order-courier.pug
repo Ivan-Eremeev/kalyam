@@ -1,7 +1,7 @@
 extends blocks/base.pug
 
 block title 
-	title Оформление заказа Самовывоз
+	title Оформление заказа Отправка курьером
 
 block style-libs
 	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
@@ -31,83 +31,6 @@ block content
 					.order__row 
 						.order__col1
 
-							//- form(action="#").order__block 
-							//- 	h2.order__subtitle Личные данные получателя заказа
-							//- 	.order__input 
-							//- 		input(type="text" placeholder="ФИО")#name
-							//- 	.order__input
-							//- 		input(type="tel" placeholder="Номер телефона")#tel.mask-tel
-
-							//- form(action="#").order__block 
-							//- 	h2.order__subtitle Выберите способ получения товара
-							//- 	.order__select.js-select
-							//- 		.order__trigger.js-drop-btn(data-drop="select1")
-							//- 			span#delivery Самовывоз
-							//- 		.order__drop#select1
-							//- 			ul.order__list 
-							//- 				li.hide
-							//- 					input#delivery_1(type="radio" name="delivery" checked)
-							//- 					label(for="delivery_1") Самовывоз
-							//- 				li 
-							//- 					input#delivery_2(type="radio" name="delivery")
-							//- 					label(for="delivery_2") Отправка курьером
-							//- 				li 
-							//- 					input#delivery_3(type="radio" name="delivery")
-							//- 					label(for="delivery_3") Доставка до ТК
-							//- 				li 
-							//- 					input#delivery_4(type="radio" name="delivery")
-							//- 					label(for="delivery_4") Доставка от магазина
-
-							//- form(action="#").order__block 
-							//- 	h2.order__subtitle Выберите дату и время самовывоза
-							//- 	.order__input.order__input--select
-							//- 		input(type="text" placeholder="Выбрать день" autocomplete="off")#datepicker
-							//- 	.order__select.js-select-nohide
-							//- 		.order__trigger.js-drop-btn(data-drop="select2")
-							//- 			span#time Выбрать время
-							//- 		.order__drop#select2
-							//- 			ul.order__list 
-							//- 				li
-							//- 					input#time_1(type="radio" name="time")
-							//- 					label(for="time_1") 8.00-10.00
-							//- 				li 
-							//- 					input#time_2(type="radio" name="time")
-							//- 					label(for="time_2") 10.00-12.00
-							//- 				li 
-							//- 					input#time_3(type="radio" name="time")
-							//- 					label(for="time_3") 13.00-15.00
-							//- 				li 
-							//- 					input#time_4(type="radio" name="time")
-							//- 					label(for="time_4") 15.00-18.00
-							//- 				li 
-							//- 					input#time_5(type="radio" name="time")
-							//- 					label(for="time_5") 18.00-20.00
-
-							//- form(action="#").order__block 
-							//- 	h2.order__subtitle Выберите способ оплаты
-							//- 	.order__select.js-select
-							//- 		.order__trigger.js-drop-btn(data-drop="select3")
-							//- 			span#pay Наличными при получении
-							//- 		.order__drop#select3
-							//- 			ul.order__list 
-							//- 				li.hide
-							//- 					input#pay_1(type="radio" name="pay" checked)
-							//- 					label(for="pay_1") Наличными при получении
-							//- 				li 
-							//- 					input#pay_2(type="radio" name="pay")
-							//- 					label(for="pay_2") Картой онлайн
-							//- 				li 
-							//- 					input#pay_3(type="radio" name="pay")
-							//- 					label(for="pay_3") Оплата по расчётному счёту
-							//- 				li 
-							//- 					input#pay_4(type="radio" name="pay")
-							//- 					label(for="pay_4") Переводом на карту
-
-							//- form(action="#").order__block 
-							//- 	h2.order__subtitle Комментарии к заказу
-							//- 	.order__textarea 
-							//- 		textarea(placeholder="Ваш комментарий")
-
 							form(action="#").order__block 
 								h2.order__subtitle Личные данные получателя заказа
 								.order__input 
@@ -119,15 +42,15 @@ block content
 								h2.order__subtitle Выберите способ получения товара
 								.order__select.js-select
 									.order__trigger.js-drop-btn(data-drop="select1")
-										span Самовывоз
+										span Отправка курьером
 									.order__drop#select1
 										ul.order__list 
 											li.hide
 												input#delivery_1(type="radio" name="delivery" checked)
-												label(for="delivery_1") Самовывоз
+												label(for="delivery_1") Отправка курьером
 											li 
 												input#delivery_2(type="radio" name="delivery")
-												label(for="delivery_2") Отправка курьером
+												label(for="delivery_2") Самовывоз
 											li 
 												input#delivery_3(type="radio" name="delivery")
 												label(for="delivery_3") Доставка до ТК
@@ -136,7 +59,7 @@ block content
 												label(for="delivery_4") Доставка от магазина
 
 							form(action="#").order__block 
-								h2.order__subtitle Выберите дату и время самовывоза
+								h2.order__subtitle Желаемое время доставки
 								.order__input.order__input--select
 									input(type="text" placeholder="Выбрать день" autocomplete="off")#datepicker
 								.order__select.js-select-nohide
@@ -181,42 +104,34 @@ block content
 												label(for="pay_4") Переводом на карту
 
 							form(action="#").order__block 
+								h2.order__subtitle Укажите адрес доставки
+								.order__input 
+									input(type="text" placeholder="Адрес доставки")
+								.order__input
+									input(type="text" placeholder="Подъезд")
+								.order__input
+									input(type="text" placeholder="Этаж")
+								.order__input
+									input(type="text" placeholder="Номер квартиры")
+
+							form(action="#").order__block 
 								h2.order__subtitle Комментарии к заказу
 								.order__textarea 
 									textarea(placeholder="Ваш комментарий")
 
 						.order__col2
 
-							//- form(action="#").order__block.order__block--sticky
-							//- 	h2.order__subtitle Информация о заказе:
-							//- 	.order__text 
-							//- 		p Телефон: 
-							//- 			span#telTo
-							//- 		p Получатель: 
-							//- 			span#nameTo
-							//- 		p Способ получения: 
-							//- 			span#deliveryTo самовывоз
-							//- 		p Дата доставки: 
-							//- 			span#datepickerTo 
-							//- 		p Время доставки: 
-							//- 			span#timeTo 
-							//- 		p Способ оплаты: 
-							//- 			spab#payTo наличными при получении
-							//- 		p Стоимость: 1000р
-							//- 		p Скидка: 0%
-							//- 		p Стоимость доставки: 200р
-							//- 	.order__result Итого: 1200 рублей
-							//- 	button(type="submit").btn Оплатить заказ
-
 							form(action="#").order__block.order__block--sticky
 								h2.order__subtitle Информация о заказе:
 								.order__text 
 									p Телефон: +7 900 323 90 10
-									p Получатель: Григорьев Александр Павлович   
-									p Способ получения: самовывоз
+									p Получатель: Григорьев Александр Павлович
+									p Способ получения: отправка курьером
 									p Дата доставки: 12 июля 2021
 									p Время доставки: 10.00-12.00
 									p Способ оплаты: наличными при получении
+									p Адрес доставки: Мусина, 98, 144 кв.
+									p Этаж и подъезд: 3, 4
 									p Стоимость: 1000р
 									p Скидка: 0%
 									p Стоимость доставки: 200р

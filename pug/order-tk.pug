@@ -1,0 +1,144 @@
+extends blocks/base.pug
+
+block title 
+	title Оформление заказа Доставка до ТК 
+
+block style-libs
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	//- link(rel="stylesheet", href="css/libs/slick.css")
+	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/aos.css")
+	link(rel="stylesheet", href="css/libs/datepicker.min.css")
+
+block content
+	include blocks/card-recom.pug
+
+	.page
+
+		include blocks/header.pug
+		
+		.content
+
+			// order
+			.order
+				.wrapper
+					h1.order__title Оформление заказа
+					.order__row 
+						.order__col1
+
+							form(action="#").order__block 
+								h2.order__subtitle Личные данные получателя заказа
+								.order__input 
+									input(type="text" placeholder="ФИО")
+								.order__input
+									input(type="tel" placeholder="Номер телефона").mask-tel
+
+							form(action="#").order__block 
+								h2.order__subtitle Выберите способ получения товара
+								.order__select.js-select
+									.order__trigger.js-drop-btn(data-drop="select1")
+										span Доставка до ТК
+									.order__drop#select1
+										ul.order__list 
+											li.hide
+												input#delivery_1(type="radio" name="delivery" checked)
+												label(for="delivery_1") Доставка до ТК
+											li 
+												input#delivery_2(type="radio" name="delivery")
+												label(for="delivery_2") Отправка курьером
+											li 
+												input#delivery_3(type="radio" name="delivery")
+												label(for="delivery_3") Самовывоз
+											li 
+												input#delivery_4(type="radio" name="delivery")
+												label(for="delivery_4") Доставка от магазина
+
+							form(action="#").order__block 
+								h2.order__subtitle Выберите способ оплаты
+								.order__select.js-select
+									.order__trigger.js-drop-btn(data-drop="select3")
+										span Наличными при получении
+									.order__drop#select3
+										ul.order__list 
+											li.hide
+												input#pay_1(type="radio" name="pay" checked)
+												label(for="pay_1") Наличными при получении
+											li 
+												input#pay_2(type="radio" name="pay")
+												label(for="pay_2") Картой онлайн
+											li 
+												input#pay_3(type="radio" name="pay")
+												label(for="pay_3") Оплата по расчётному счёту
+											li 
+												input#pay_4(type="radio" name="pay")
+												label(for="pay_4") Переводом на карту
+
+							form(action="#").order__block 
+								h2.order__subtitle Название траспортной компании
+								.order__input 
+									input(type="text" placeholder="Название")
+
+							form(action="#").order__block 
+								h2.order__subtitle Пункт выдачи товара
+								.order__input 
+									input(type="text" placeholder="Название")
+
+							form(action="#").order__block 
+								h2.order__subtitle Укажите адрес доставки
+								.order__input 
+									input(type="text" placeholder="Адрес доставки")
+								.order__input
+									input(type="text" placeholder="Подъезд")
+								.order__input
+									input(type="text" placeholder="Этаж")
+								.order__input
+									input(type="text" placeholder="Номер квартиры")
+
+							form(action="#").order__block 
+								h2.order__subtitle Комментарии к заказу
+								.order__textarea 
+									textarea(placeholder="Ваш комментарий")
+
+						.order__col2
+
+							form(action="#").order__block.order__block--sticky
+								h2.order__subtitle Информация о заказе:
+								.order__text 
+									p Телефон: +7 900 323 90 10
+									p Получатель: Григорьев Александр Павлович
+									p Способ получения: доставка до ТК
+									p Способ оплаты: наличными при получении
+									p Адрес доставки: Мусина, 98, 144 кв.
+									p Этаж и подъезд: 3, 4
+									p Стоимость: 1000р
+									p Скидка: 0%
+									p Стоимость доставки: 200р
+								.order__result Итого: 1200 рублей
+								button(type="submit").btn Оплатить заказ
+			//	/order
+			
+		include blocks/footer.pug
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	//- script(src="js/libs/jquery.scrollbar.min.js")
+	//- script(src="js/libs/aos.js")
+	//- script(src="js/libs/circle-progress.min.js")
+	//- script(src="js/libs/bootstrap.bundle.min.js") 
+	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")
+	script(src="js/libs/datepicker.min.js") 

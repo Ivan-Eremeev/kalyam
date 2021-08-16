@@ -202,6 +202,43 @@ body {
 .scrollbar-inner > .scroll-element, .scrollbar-inner > .scroll-element div {
   z-index: 2;
 }
+.datepicker {
+  width: 322px;
+}
+.datepicker--pointer {
+  display: none;
+}
+.datepicker--content {
+  position: relative;
+  padding: 28px 18px 70px;
+  font-size: 18px;
+  .btn {
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+.datepicker--nav {
+  padding: 18px;
+}
+.datepicker--nav-title {
+  font-size: 22px;
+  color: #262626;
+}
+.datepicker--day-name {
+  color: $green;
+}
+.datepicker--cell {
+  color: #828282;
+  &.-other-month- {
+    opacity: 0;
+  }
+  &.-current- {
+    color: $green;
+  }
+}
 
 @keyframes favorite {
   0% {
