@@ -335,14 +335,10 @@ $(document).ready(function () {
 
 	// Меню каталога на мобилке
 	function menuCatalogMob() {
-		var btn = $('#btnCatalog'),
-				menu = $('#menu-catalog'),
+		var menu = $('#menu-catalog'),
 				btnSubmenu = $('.menu-catalog__next'),
 				submenu = $('.menu-catalog__sublist'),
 				close = $('.menu-catalog__close');
-		btn.on('click', function () {
-			menu.addClass('open');
-		})
 		btnSubmenu.on('click', function () {
 			$(this).siblings('.menu-catalog__sublist').addClass('open');
 		})
@@ -351,6 +347,13 @@ $(document).ready(function () {
 				submenu.removeClass('open');
 			}else {
 				menu.removeClass('open');
+			}
+		})
+		$(window).resize( function () {
+			if ($(window).width() >= breakSm) {
+				submenu.removeClass('open');
+				menu.removeClass('open');
+				$('[data-drop="menu-catalog"]').removeClass('is-active');
 			}
 		})
 	}
