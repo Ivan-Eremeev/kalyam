@@ -1685,6 +1685,7 @@ body.lock {
 .card-recom__text {
   margin-bottom: 10px;
   font-size: 11px;
+  color: #515151;
 }
 .card-recom__bottom {
   display: -webkit-box;

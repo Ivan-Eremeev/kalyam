@@ -1,7 +1,7 @@
 mixin card-recom(count)
   // card-recom
-  a(href="#").card-recom
-    .card-recom__img 
+  .card-recom
+    a(href="#").card-recom__img 
       img(src="img/product-thumb_1.jpg", alt="")
       .card-recom__stickers 
         .card-recom__sticker.card-recom__sticker--red -20%
@@ -9,7 +9,7 @@ mixin card-recom(count)
       .card-recom__price 
         .card-recom__price-new 120р
         .card-recom__price-old 170р
-      .card-recom__text Поп ит, Pop it, Игрушка Антистресс
+      a(href="#").card-recom__text Поп ит, Pop it, Игрушка Антистресс
       form(action="#").card-recom__bottom
         button(type="submit").btn В корзину
         .card-recom__like 
