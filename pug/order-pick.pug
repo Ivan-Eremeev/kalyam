@@ -1,7 +1,7 @@
 extends blocks/base.pug
 
 block title 
-	title Оформление заказа
+	title Оформление заказа Самовывоз
 
 block style-libs
 	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
@@ -34,38 +34,37 @@ block content
 							form(action="#").order__block 
 								h2.order__subtitle Личные данные получателя заказа
 								.order__input 
-									input(type="text" placeholder="ФИО")#name
+									input(type="text" placeholder="ФИО")
 								.order__input
-									input(type="tel" placeholder="Номер телефона")#tel.mask-tel
+									input(type="tel" placeholder="Номер телефона").mask-tel
 
 							form(action="#").order__block 
 								h2.order__subtitle Выберите способ получения товара
 								.order__select.js-select
 									.order__trigger.js-drop-btn(data-drop="select1")
-										span#delivery Самовывоз
+										span Самовывоз
 									.order__drop#select1
-										ul.order__list#toggle-block
+										ul.order__list 
 											li.hide
-												input#delivery_1(type="radio" name="delivery" value="pick" checked)
+												input#delivery_1(type="radio" name="delivery" checked)
 												label(for="delivery_1") Самовывоз
 											li 
-												input#delivery_2(type="radio" name="delivery" value="courier")
+												input#delivery_2(type="radio" name="delivery")
 												label(for="delivery_2") Отправка курьером
 											li 
-												input#delivery_3(type="radio" name="delivery" value="tk")
+												input#delivery_3(type="radio" name="delivery")
 												label(for="delivery_3") Доставка до ТК
 											li 
-												input#delivery_4(type="radio" name="delivery" value="store")
+												input#delivery_4(type="radio" name="delivery")
 												label(for="delivery_4") Доставка от магазина
 
-							form(action="#").order__block.js-toggle.js-pick.js-courier.js-store
-								h2.order__subtitle.js-toggle.js-pick Выберите дату и время самовывоза
-								h2.order__subtitle.js-toggle.js-courier.js-store Выберите желаемое время доставки
+							form(action="#").order__block 
+								h2.order__subtitle Выберите дату и время самовывоза
 								.order__input.order__input--select
 									input(type="text" placeholder="Выбрать день" autocomplete="off")#datepicker
 								.order__select.js-select-nohide
 									.order__trigger.js-drop-btn(data-drop="select2")
-										span#time Выбрать время
+										span Выбрать время
 									.order__drop#select2
 										ul.order__list 
 											li
@@ -88,7 +87,7 @@ block content
 								h2.order__subtitle Выберите способ оплаты
 								.order__select.js-select
 									.order__trigger.js-drop-btn(data-drop="select3")
-										span#pay Наличными при получении
+										span Наличными при получении
 									.order__drop#select3
 										ul.order__list 
 											li.hide
@@ -104,27 +103,6 @@ block content
 												input#pay_4(type="radio" name="pay")
 												label(for="pay_4") Переводом на карту
 
-							form(action="#").order__block.js-toggle.js-tk
-								h2.order__subtitle Название траспортной компании
-								.order__input 
-									input(type="text" placeholder="Название")
-
-							form(action="#").order__block.js-toggle.js-tk
-								h2.order__subtitle Пункт выдачи товара
-								.order__input 
-									input(type="text" placeholder="Название")
-
-							form(action="#").order__block.js-toggle.js-courier.js-store
-								h2.order__subtitle Укажите адрес доставки
-								.order__input 
-									input(type="text" placeholder="Адрес доставки")#street.mask-street
-								.order__input
-									input(type="text" placeholder="Подъезд")#entrance.mask-entrance
-								.order__input
-									input(type="text" placeholder="Этаж")#floor.mask-floor
-								.order__input
-									input(type="text" placeholder="Номер квартиры")#kv.mask-kv
-
 							form(action="#").order__block 
 								h2.order__subtitle Комментарии к заказу
 								.order__textarea 
@@ -135,32 +113,17 @@ block content
 							form(action="#").order__block.order__block--sticky
 								h2.order__subtitle Информация о заказе:
 								.order__text 
-									p Телефон: 
-										span#telTo
-									p Получатель: 
-										span#nameTo
-									p Способ получения: 
-										span#deliveryTo самовывоз
-									p.js-toggle.js-pick.js-courier.js-store Дата доставки: 
-										span#datepickerTo 
-									p.js-toggle.js-pick.js-courier.js-store Время доставки: 
-										span#timeTo 
-									p Способ оплаты: 
-										spab#payTo наличными при получении
-									p.js-toggle.js-courier.js-tk.js-store Адрес доставки: 
-										span#streetTo 
-										span , 
-										span#kvTo 
-									p.js-toggle.js-courier.js-tk.js-store Этаж и подъезд: 
-										span#floorTo
-										span , 
-										span#entranceTo
+									p Телефон: +7 900 323 90 10
+									p Получатель: Григорьев Александр Павлович   
+									p Способ получения: самовывоз
+									p Дата доставки: 12 июля 2021
+									p Время доставки: 10.00-12.00
+									p Способ оплаты: наличными при получении
 									p Стоимость: 1000р
 									p Скидка: 0%
 									p Стоимость доставки: 200р
 								.order__result Итого: 1200 рублей
 								button(type="submit").btn Оплатить заказ
-
 			//	/order
 			
 		include blocks/footer.pug

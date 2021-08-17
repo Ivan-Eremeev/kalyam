@@ -144,6 +144,18 @@ $(document).ready(function () {
 	if ($('.mask-cvc').length) {
 		$('.mask-cvc').inputmask('999');
 	}
+	if ($('.mask-street').length) {
+		$('.mask-street').inputmask('ул. a{1,20} дом.9{1,3}');
+	}
+	if ($('.mask-entrance').length) {
+		$('.mask-entrance').inputmask('99');
+	}
+	if ($('.mask-floor').length) {
+		$('.mask-floor').inputmask('99');
+	}
+	if ($('.mask-kv').length) {
+		$('.mask-kv').inputmask('999');
+	}
 
 	// JQueryScrollbar
 	if ($('.scrollbar-inner').length) {
@@ -229,25 +241,6 @@ $(document).ready(function () {
 	}
 	spinner()
 
-	// // Подстановка значения из инпута в блок
-	// function valFromInput(input, block) {
-	// 	input.on('input', function () {
-	// 		block.text($(this).val());
-	// 	})
-	// }
-	// valFromInput($('#name'), $('#nameTo'));
-	// valFromInput($('#tel'), $('#telTo'));
-
-	// // Подстановка значения из селекта в блок
-	// function valFromSelect(select, block) {
-	// 	select.bind('DOMSubtreeModified', function () {
-	// 		block.text($(this).text().toLowerCase());
-	// 	}
-	// )}
-	// valFromSelect($('#time'), $('#timeTo'));
-	// valFromSelect($('#delivery'), $('#deliveryTo'));
-	// valFromSelect($('#pay'), $('#payTo'));
-
 	// Air Datepicker
 	if ($("#datepicker").length) {
 		$("#datepicker").on('input', function (e) {
@@ -313,5 +306,42 @@ $(document).ready(function () {
 		})
 	}
 	menuCatalogMob();
+
+	// Подстановка значения из инпута в блок
+	function valFromInput(input, block) {
+		input.on('input', function () {
+			block.text($(this).val());
+		})
+	}
+	valFromInput($('#name'), $('#nameTo'));
+	valFromInput($('#tel'), $('#telTo'));
+	valFromInput($('#street'), $('#streetTo'));
+	valFromInput($('#kv'), $('#kvTo'));
+	valFromInput($('#floor'), $('#floorTo'));
+	valFromInput($('#entrance'), $('#entranceTo'));
+
+	// Подстановка значения из селекта в блок
+	function valFromSelect(select, block) {
+		select.bind('DOMSubtreeModified', function () {
+			block.text($(this).text().toLowerCase());
+		}
+	)}
+	valFromSelect($('#time'), $('#timeTo'));
+	valFromSelect($('#delivery'), $('#deliveryTo'));
+	valFromSelect($('#pay'), $('#payTo'));
+
+	// Перетасовка блоков взависимости от выбранного способа доставки
+	function toggleDeliveryBlock() {
+		var blocks = $('.js-toggle'),
+				blockInputs = $('#toggle-block');
+		toggle();
+		blockInputs.find('input').on('change', toggle);
+		function toggle() {
+			var val = blockInputs.find('input:checked').val();
+			blocks.hide();
+			$('.js-' + val).show();
+		}
+	}
+	toggleDeliveryBlock();
 
 });
