@@ -62,6 +62,7 @@
     border-radius: 0 0 5px 5px;
     font-size: 20px;
     color: #828282;
+    background-color: #fff;
     text-align: center;
     transition: 0.2s;
     user-select: none;
@@ -180,7 +181,7 @@
   &__count-btn {
     width: 28px;
     height: 28px;
-    border: 0.5px solid #262626;
+    border: 0.5px solid #828282;
     box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.05);
     border-radius: 2px;
     position: relative;

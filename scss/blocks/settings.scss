@@ -168,6 +168,11 @@ body {
       }
     }
   }
+  @media (max-width: $break_sm) {
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+      border-radius: 0;
+    }
+  }
 }
 .scroll-element.scroll-x {
     display: none !important;

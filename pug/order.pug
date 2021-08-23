@@ -60,7 +60,7 @@ block content
 
 							form(action="#").order__block.js-toggle.js-pick.js-courier.js-store
 								h2.order__subtitle.js-toggle.js-pick Выберите дату и время самовывоза
-								h2.order__subtitle.js-toggle.js-courier.js-store Выберите желаемое время доставки
+								h2.order__subtitle.js-toggle.js-courier.js-store Выберите желаемую дату и время доставки
 								.order__input.order__input--select
 									input(type="text" placeholder="Выбрать день" autocomplete="off")#datepicker
 								.order__select.js-select-nohide
@@ -141,9 +141,13 @@ block content
 										span#nameTo
 									p Способ получения: 
 										span#deliveryTo самовывоз
-									p.js-toggle.js-pick.js-courier.js-store Дата доставки: 
+									p.js-toggle.js-pick.js-courier.js-store 
+										span.js-toggle.js-pick Дата самовывоза: 
+										span.js-toggle.js-courier.js-store Дата доставки: 
 										span#datepickerTo 
-									p.js-toggle.js-pick.js-courier.js-store Время доставки: 
+									p.js-toggle.js-pick.js-courier.js-store 
+										span.js-toggle.js-pick Время самовывоза: 
+										span.js-toggle.js-courier.js-store Время доставки: 
 										span#timeTo 
 									p Способ оплаты: 
 										spab#payTo наличными при получении

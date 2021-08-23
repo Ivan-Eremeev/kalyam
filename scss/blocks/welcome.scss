@@ -12,6 +12,11 @@
     font-weight: bold;
     color: #060606;
     margin-bottom: 22px;
+    span {
+      display: inline-block;
+      padding-bottom: 6px;
+      transform: rotate(180deg);
+    }
   }
   &__text {
     font-size: 24px;
@@ -83,6 +88,9 @@
     &__title {
       font-size: 25px;
       margin-bottom: 16px;
+      span {
+        padding-bottom: 3px;
+      }
     }
     &__text {
       font-size: 15px;
