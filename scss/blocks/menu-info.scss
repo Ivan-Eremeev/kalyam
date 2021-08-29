@@ -12,12 +12,12 @@
     position: relative;
     z-index: 12;
     svg {
-      fill: $green;
+      fill: #fff;
       transition: $trans;
     }
     &:hover, &.is-active {
       svg {
-        fill: #828282;
+        fill: $greenL;
       }
     }
   }

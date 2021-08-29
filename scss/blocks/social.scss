@@ -13,10 +13,9 @@
     height: 40px;
     margin-left: 10px;
     margin-bottom: 10px;
-    background: $greenG;
-    transition: 0s;
+    background: $green;
     &:hover {
-      background: #BDBDBD;
+      background: $greenL;
     }
     &--tg {
       img {
