@@ -1,6 +1,6 @@
 .catalog {
   padding-top: 55px;
-  padding-bottom: 11px;
+  padding-bottom: 68px;
   font-size: 22px;
   font-weight: 600;
   &__col {
@@ -31,14 +31,14 @@
 
   }
   @media (max-width: $break_sm) {
-    padding-bottom: 22px;
+    padding-bottom: 83px;
     &__col {
       margin-bottom: 34px;
     }
   }
   @media (max-width: $break_xs) {
     padding-top: 34px;
-    padding-bottom: 2px;
+    padding-bottom: 46px;
     font-size: 18px;
     &__col {
       margin-bottom: 29px;

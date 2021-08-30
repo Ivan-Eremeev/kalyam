@@ -1,0 +1,11 @@
+.banner {
+  display: block;
+  margin-bottom: 60px;
+  img {
+    display: block;
+    width: 100%;
+  }
+  @media (max-width: $break_xs) {
+    margin-bottom: 38px;
+  }
+}

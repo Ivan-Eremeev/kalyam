@@ -1,0 +1,37 @@
+.recom {
+  &__col {
+    @include col(2);
+    @include col-md(3);
+    @include col-sm(4);
+    @include col-xs(6);
+    margin-bottom: $gutter;
+  }
+  @media (max-width: $break_md) {
+    &__col {
+      &:not(:nth-child(n + 3)) {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    .row {
+      margin-left: -20px;
+    }
+    &__col {
+      padding-left: 20px;
+      margin-bottom: 20px;
+      &:not(:nth-child(n + 3)) {
+        display: block;
+      }
+    }
+  }
+  @media (max-width: $break_xs) {
+    .row {
+      margin-left: -14px;
+    }
+    &__col {
+      padding-left: 14px;
+      margin-bottom: 14px;
+    }
+  }
+}

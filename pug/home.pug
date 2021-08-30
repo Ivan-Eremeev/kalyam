@@ -109,31 +109,55 @@ block content
 								.catalog__text Пряжа и рукоделие
 				//	/catalog
 
-				// banners
-				.banners
-					.row 
-						.banners__half 
-							a(href="#").banners__banner.img-responsive
-								img(src="img/banner_1.jpg", alt="")
-							a(href="#").banners__banner.img-responsive
-								img(src="img/banner_2.jpg", alt="")
-							a(href="#").banners__banner.img-responsive
-								img(src="img/banner_3.jpg", alt="")
-						.banners__half 
-							.banners__row
-								.banners__col 
-									+card-recom('card-recom-like_1')
-								.banners__col 
-									+card-recom('card-recom-like_2')
-								.banners__col 
-									+card-recom('card-recom-like_3')
-								.banners__col 
-									+card-recom('card-recom-like_4')
-								.banners__col 
-									+card-recom('card-recom-like_5')
-								.banners__col 
-									+card-recom('card-recom-like_6')
-				//	/banners
+				//- // banners
+				//- .banners
+				//- 	.row 
+				//- 		.banners__half 
+				//- 			a(href="#").banners__banner.img-responsive
+				//- 				img(src="img/banner_1.jpg", alt="")
+				//- 			a(href="#").banners__banner.img-responsive
+				//- 				img(src="img/banner_2.jpg", alt="")
+				//- 			a(href="#").banners__banner.img-responsive
+				//- 				img(src="img/banner_3.jpg", alt="")
+				//- 		.banners__half 
+				//- 			.banners__row
+				//- 				.banners__col 
+				//- 					+card-recom('card-recom-like_1')
+				//- 				.banners__col 
+				//- 					+card-recom('card-recom-like_2')
+				//- 				.banners__col 
+				//- 					+card-recom('card-recom-like_3')
+				//- 				.banners__col 
+				//- 					+card-recom('card-recom-like_4')
+				//- 				.banners__col 
+				//- 					+card-recom('card-recom-like_5')
+				//- 				.banners__col 
+				//- 					+card-recom('card-recom-like_6')
+				//- //	/banners
+
+				// banner
+				a(href="#").banner
+					picture 
+						source(media="(max-width: 768px)", srcset="img/banner_big-mob.jpg")
+						img(src="img/banner_big.jpg", alt="")
+				//	/banner
+
+				// recom
+				.recom
+					.row
+						.recom__col 
+							+card-recom('card-recom-like_1')
+						.recom__col 
+							+card-recom('card-recom-like_2')
+						.recom__col 
+							+card-recom('card-recom-like_3')
+						.recom__col 
+							+card-recom('card-recom-like_4')
+						.recom__col 
+							+card-recom('card-recom-like_5')
+						.recom__col 
+							+card-recom('card-recom-like_6')
+				//	/recom
 			
 		include blocks/footer.pug
 
