@@ -1,0 +1,29 @@
+.bannerscreen {
+  margin-bottom: 60px;
+  &__col {
+    @include col(6);
+    @include col-sm(12);
+  }
+  &__banner {
+    display: block;
+    border-radius: 6px;
+    &:after {
+      padding-top: 28%;
+    }
+  }
+  @media (max-width: $break_sm) {
+    margin-bottom: 40px;
+    &__col {
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: $break_xs) {
+    margin-bottom: 25px;
+    &__col {
+      margin-bottom: 15px;
+    }
+    &__banner {
+      border-radius: 3px;
+    }
+  }
+}

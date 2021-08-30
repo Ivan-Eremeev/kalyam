@@ -1,4 +1,5 @@
 .recom {
+  margin-bottom: 30px;
   &__col {
     @include col(2);
     @include col-md(3);
@@ -14,6 +15,7 @@
     }
   }
   @media (max-width: $break_sm) {
+    margin-bottom: 40px;
     .row {
       margin-left: -20px;
     }
@@ -26,6 +28,7 @@
     }
   }
   @media (max-width: $break_xs) {
+    margin-bottom: 26px;
     .row {
       margin-left: -14px;
     }

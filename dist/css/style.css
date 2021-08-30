@@ -4592,6 +4592,8 @@ body.lock {
 .banner {
   display: block;
   margin-bottom: 60px;
+  border-radius: 6px;
+  overflow: hidden;
 }
 .banner img {
   display: block;
@@ -4600,9 +4602,13 @@ body.lock {
 @media (max-width: 500px) {
   .banner {
     margin-bottom: 38px;
+    border-radius: 3px;
   }
 }
 
+.recom {
+  margin-bottom: 30px;
+}
 .recom__col {
   width: 16.6666666667%;
   margin-bottom: 30px;
@@ -4628,6 +4634,9 @@ body.lock {
   }
 }
 @media (max-width: 769px) {
+  .recom {
+    margin-bottom: 40px;
+  }
   .recom .row {
     margin-left: -20px;
   }
@@ -4640,11 +4649,52 @@ body.lock {
   }
 }
 @media (max-width: 500px) {
+  .recom {
+    margin-bottom: 26px;
+  }
   .recom .row {
     margin-left: -14px;
   }
   .recom__col {
     padding-left: 14px;
     margin-bottom: 14px;
+  }
+}
+
+.bannerscreen {
+  margin-bottom: 60px;
+}
+.bannerscreen__col {
+  width: 50%;
+}
+@media screen and (max-width: 769px) {
+  .bannerscreen__col {
+    width: 100%;
+  }
+}
+.bannerscreen__banner {
+  display: block;
+  border-radius: 6px;
+}
+.bannerscreen__banner:after {
+  padding-top: 28%;
+}
+@media (max-width: 769px) {
+  .bannerscreen {
+    margin-bottom: 40px;
+  }
+  .bannerscreen__col {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .bannerscreen {
+    margin-bottom: 25px;
+  }
+  .bannerscreen__col {
+    margin-bottom: 15px;
+  }
+  .bannerscreen__banner {
+    border-radius: 3px;
   }
 }
