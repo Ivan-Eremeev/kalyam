@@ -6,7 +6,8 @@
 
 // * Настройки *
 const preprocessor = 'scss', // Выбрать препроцессор для стилей (scss или less)
-  jsOn = true; // Нужно ли компилировать js
+  jsOn = true, // Нужно ли компилировать js
+  html = false; // Нужно ли делать перезагрузку браузера при изменении html файлов
 
 // * Пути к папкам относительно корня проекта *
 const scssPath = 'scss', // Scss
@@ -136,10 +137,12 @@ gulp.task('mg', function () {
 
 gulp.task('watch', function () {
   gulp.watch(pugPath + '/**/*.pug', gulp.parallel('pug'));
-  gulp.watch(htmlPath + '/**/*.html', function reload(done) {
-    browserSync.reload();
-    done();
-  });
+  if (html) {
+    gulp.watch(htmlPath + '/**/*.html', function reload(done) {
+      browserSync.reload();
+      done();
+    });
+  }
   if (jsOn) {
     gulp.watch(jsAppPath + '/**/*.js', gulp.parallel('js'));
   } else {

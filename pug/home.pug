@@ -26,25 +26,22 @@ block content
 
 				// welcome
 				.welcome
-					.welcome__content 
-						h1.welcome__title Кал
-							span е
-							| м - интернет-магазин, канцелярские товары и не только
-						.welcome__text 
-							p 
-								img(src="img/percent.svg", alt="")
-								| Скидки постоянным покупателям
-						a(href="#").btn Смотреть каталог
-					.welcome__slider
-						.js-welcome-slider 
-							.img-responsive
-								img(src="img/", alt="")
-							.img-responsive
-								img(src="img/", alt="")
-							.img-responsive
-								img(src="img/", alt="")
-							.img-responsive
-								img(src="img/", alt="")
+					.welcome__row
+						.welcome__content 
+							.welcome__logo 
+								img(src="img/logo-big.svg", alt="")
+							h1.welcome__title 
+								span КАНЦЕЛЯРСКИЕ ТОВАРЫ 
+								span И НЕ ТОЛЬКО
+							.welcome__text  
+								img(src="img/percent_3.svg", alt="")
+								| скидки постоянным клиентам
+						.welcome__slider
+							.js-welcome-slider
+								.welcome__slide
+								.welcome__slide
+								.welcome__slide
+								.welcome__slide
 				//	/welcome
 
 				// catalog
