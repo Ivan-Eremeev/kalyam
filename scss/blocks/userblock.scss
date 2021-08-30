@@ -11,10 +11,10 @@
     transition: $trans;
     user-select: none;
     &:hover {
-      color: $greenL;
+      color: #bdbdbd;
       .userblock__icon {
         svg {
-          fill: $greenL;
+          fill: #bdbdbd;
         }
       }
     }

@@ -314,6 +314,11 @@ body.lock {
   background-image: url(../img/bg.jpg);
   background-size: cover;
 }
+@media (max-width: 769px) {
+  .content {
+    padding-top: 75px;
+  }
+}
 @media (max-width: 500px) {
   .content {
     padding-bottom: 0;
@@ -856,6 +861,7 @@ body.lock {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  position: relative;
 }
 .header .btn {
   margin: 0 20px;
@@ -882,15 +888,14 @@ body.lock {
   position: relative;
   z-index: 12;
 }
-.header.stiky .header__container {
-  height: 80px;
+@media (max-width: 769px) {
+  .header__container {
+    height: 75px;
+  }
 }
 @media (max-width: 500px) {
-  .header__container {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    position: relative;
+  .header__hamb {
+    margin-right: 0;
   }
 }
 .header .logo {
@@ -901,11 +906,13 @@ body.lock {
   max-width: 176px;
   -ms-flex-item-align: center;
   align-self: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 @media (max-width: 769px) {
   .logo {
-    max-width: 116px;
-    max-height: 37px;
+    max-width: 120px;
+    max-height: 40px;
   }
 }
 
@@ -960,6 +967,9 @@ body.lock {
   border: none;
   background: transparent;
 }
+.search__placeholder {
+  display: none;
+}
 @media (max-width: 1050px) {
   .search {
     max-width: 300px;
@@ -999,6 +1009,11 @@ body.lock {
   .search button {
     width: 38px;
     background-color: #F0F0F0;
+  }
+  .search__placeholder {
+    display: block;
+    width: 38px;
+    height: 100%;
   }
   .search.open input {
     width: 100%;
@@ -1117,7 +1132,7 @@ body.lock {
   background: #077133;
 }
 .social__icon:hover {
-  background: #079A33;
+  background: #bdbdbd;
 }
 .social__icon--tg img {
   margin-right: 2px;
@@ -1165,7 +1180,7 @@ body.lock {
   transition: 0.2s;
 }
 .menu-info__btn:hover svg, .menu-info__btn.is-active svg {
-  fill: #079A33;
+  fill: #bdbdbd;
 }
 .menu-info__drop {
   width: 380px;
@@ -1261,10 +1276,10 @@ body.lock {
   user-select: none;
 }
 .userblock__item:hover {
-  color: #079A33;
+  color: #bdbdbd;
 }
 .userblock__item:hover .userblock__icon svg {
-  fill: #079A33;
+  fill: #bdbdbd;
 }
 .userblock__icon {
   display: -webkit-box;
@@ -1401,21 +1416,29 @@ body.lock {
 }
 
 .mobile-menu {
-  display: none;
-  width: 100%;
-  padding-top: 95px;
-  padding-left: 15px;
-  padding-right: 15px;
+  height: calc(100vh - 100px);
+  padding: 30px 30px 30px;
   background-color: #fff;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 100%;
+  -webkit-box-shadow: 0px 12px 53px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 12px 53px rgba(0, 0, 0, 0.06);
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate(0, 50px);
+  -ms-transform: translate(0, 50px);
+  transform: translate(0, 50px);
   z-index: 11;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
   overflow-y: auto;
+}
+.mobile-menu__container {
+  background-color: #fff;
+  position: relative;
+  z-index: 13;
 }
 .mobile-menu__row {
   display: -webkit-box;
@@ -1440,9 +1463,15 @@ body.lock {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 14px;
-  color: #262626;
   font-size: 20px;
+  color: #262626;
   font-weight: 500;
+}
+.mobile-menu__item:hover {
+  color: #077133;
+}
+.mobile-menu__item:hover .mobile-menu__icon svg {
+  fill: #077133;
 }
 .mobile-menu__icon {
   display: -webkit-box;
@@ -1458,18 +1487,56 @@ body.lock {
   height: 24px;
   margin-right: 14px;
 }
+.mobile-menu__icon svg {
+  fill: #262626;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
 .mobile-menu .btn {
   margin: 0;
+  background-color: #077133;
+  color: #fff;
+}
+.mobile-menu__pages {
+  padding-top: 60px;
+}
+.mobile-menu__title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #060606;
+  margin-bottom: 18px;
+}
+.mobile-menu__list {
+  font-size: 18px;
+}
+.mobile-menu__list li {
+  margin-bottom: 9px;
+}
+.mobile-menu__list a {
+  color: #262626;
+}
+.mobile-menu__list a:hover {
+  color: #077133;
 }
 .mobile-menu.open {
-  left: 0;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 @media (max-width: 769px) {
   .mobile-menu {
-    display: block;
+    height: calc(100vh - 75px);
+    padding: 30px 20px 20px;
+    left: -20px;
   }
 }
 @media (max-width: 500px) {
+  .mobile-menu {
+    right: -20px;
+  }
   .mobile-menu__row {
     margin-left: 0;
   }
@@ -1479,6 +1546,9 @@ body.lock {
   }
   .mobile-menu .btn {
     margin-bottom: 35px;
+  }
+  .mobile-menu__pages {
+    padding-top: 25px;
   }
 }
 

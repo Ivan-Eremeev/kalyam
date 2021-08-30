@@ -111,6 +111,9 @@ body {
     background-image: url(../img/bg.jpg);
     background-size: cover;
   }
+  @media (max-width: $break_sm) {
+    padding-top: 75px;
+  }
   @media (max-width: $break_xs) {
     padding-bottom: 0;
   }
