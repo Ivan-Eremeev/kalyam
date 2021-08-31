@@ -14,18 +14,18 @@ $(document).ready(function () {
 	
 	//= libs-settings/slick_settings.js
 
-	// Stiky menu // Липкое меню.
-	function stikyMenu(header) {
-		headerTop = header.offset().top;
-		$(window).scroll(function(){
-			if( $(window).scrollTop() > headerTop ) {
-				header.addClass('stiky');
-			} else {
-				header.removeClass('stiky');
-			}
-		});
-	};
-	stikyMenu($('#header'));
+	// // Stiky menu // Липкое меню.
+	// function stikyMenu(header) {
+	// 	headerTop = header.offset().top;
+	// 	$(window).scroll(function(){
+	// 		if( $(window).scrollTop() > headerTop ) {
+	// 			header.addClass('stiky');
+	// 		} else {
+	// 			header.removeClass('stiky');
+	// 		}
+	// 	});
+	// };
+	// stikyMenu($('#header'));
 
 	// Аккордеон
 	function accordion() {

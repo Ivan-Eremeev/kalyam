@@ -83,6 +83,7 @@ body {
 }
 .wrapper {
   @include wrapper();
+  position: relative;
   @media (max-width: $break_sm) {
     max-width: 610px;
   }

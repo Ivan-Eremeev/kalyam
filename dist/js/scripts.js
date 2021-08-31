@@ -59,18 +59,18 @@ $(document).ready(function () {
 	}
 	sliderProduct($('#product-slider'), $('#product-slider-nav'));
 
-	// Stiky menu // Липкое меню.
-	function stikyMenu(header) {
-		headerTop = header.offset().top;
-		$(window).scroll(function(){
-			if( $(window).scrollTop() > headerTop ) {
-				header.addClass('stiky');
-			} else {
-				header.removeClass('stiky');
-			}
-		});
-	};
-	stikyMenu($('#header'));
+	// // Stiky menu // Липкое меню.
+	// function stikyMenu(header) {
+	// 	headerTop = header.offset().top;
+	// 	$(window).scroll(function(){
+	// 		if( $(window).scrollTop() > headerTop ) {
+	// 			header.addClass('stiky');
+	// 		} else {
+	// 			header.removeClass('stiky');
+	// 		}
+	// 	});
+	// };
+	// stikyMenu($('#header'));
 
 	// Аккордеон
 	function accordion() {
