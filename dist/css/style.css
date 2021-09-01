@@ -415,12 +415,6 @@ body.lock {
   transition: 0.2s !important;
 }
 
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after {
-  background-color: #BDBDBD !important;
-}
-
 .scroll-element.scroll-x {
   display: none !important;
 }
@@ -852,7 +846,7 @@ body.lock {
 
 .header .btn:hover {
   color: #fff;
-  background-color: #079A33;
+  background-color: #065C2A;
 }
 
 .header__hamb {
@@ -3883,12 +3877,6 @@ body.lock {
     display: none !important;
   }
 
-  .hamburger:hover .hamburger-inner,
-  .hamburger:hover .hamburger-inner::before,
-  .hamburger:hover .hamburger-inner::after {
-    background-color: #BDBDBD !important;
-  }
-
   .menu-catalog__sublist {
     display: none;
     max-height: calc(100vh - 75px);
@@ -4768,7 +4756,8 @@ body.lock {
 
   .search button {
     width: 38px;
-    background-color: #F0F0F0;
+    background-color: #065C2A;
+    border-radius: 2px;
   }
 
   .search__placeholder {

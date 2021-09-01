@@ -19,7 +19,7 @@
     transition: 0.3s;
     &:hover {
       color: #fff;
-      background-color: $greenL;
+      background-color: #065C2A;
     }
   }
   &__hamb {
@@ -121,7 +121,8 @@
     }
     button {
       width: 38px;
-      background-color: #F0F0F0;
+      background-color: #065C2A;
+      border-radius: 2px; 
     }
     &__placeholder {
       display: block;

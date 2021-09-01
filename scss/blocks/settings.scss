@@ -160,17 +160,17 @@ body {
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     transition: $trans !important;
   }
-  &.is-active {
-    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-      background-color: #BDBDBD !important;
-    }
-  }
+  // &.is-active {
+  //   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  //     background-color: #BDBDBD !important;
+  //   }
+  // }
   @media (min-width: $break_sm + 1) {
-    &:hover {
-      .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-        background-color: #BDBDBD !important;
-      }
-    }
+    // &:hover {
+    //   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    //     background-color: #BDBDBD !important;
+    //   }
+    // }
   }
   @media (max-width: $break_sm) {
     .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
